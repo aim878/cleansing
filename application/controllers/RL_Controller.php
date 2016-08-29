@@ -271,6 +271,11 @@
 
                 }
         
+        }
+
+        public function testing()
+        {
+        	$this->load->view('backend/table_editable');
         }	
 
 	

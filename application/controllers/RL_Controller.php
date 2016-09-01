@@ -153,8 +153,7 @@
 		{
 			if($this->RL_model->is_user_logged_in())
 			{
-				$array_data = $this->RL_model->get_slider_data();
-				$this->load->view('backend/dashboard', array('error' => ' ', 'slider_data' => $array_data));
+				$this->load->view('backend/dashboard', array('error' => ' '));
 			}
 			else
 			{
@@ -213,7 +212,8 @@
         }
 		
 		/////////////////////////////////
-		///    Image Upload Segment   ///
+		///      Image Upload And     ///
+		///		  Update Segment      ///
 		/////////////////////////////////
 
 		/********************************/
@@ -264,7 +264,7 @@
                 		$usr_data['image_id']; 
 
                 		## Slider Images Update Query ##
-                		$this->RL_model->image_data_update($usr_data, $orignalName);
+                		$this->RL_model->image_data_upload($usr_data, $orignalName);
                         redirect('rl_view');
 
 
@@ -273,10 +273,103 @@
         
         }
 
-        public function testing()
+		/********************************/
+		/*  	 Show All Images        */
+		/********************************/
+        public function slider_Images_show()
         {
-        	$this->load->view('backend/table_editable');
-        }	
+
+        	$array_data = $this->RL_model->get_slider_data();
+        	$this->load->view('backend/table_editable', array('slider_data' => $array_data));
+       
+        }
+
+        /********************************/
+		/*  	 Delete   Images        */
+		/********************************/
+        public function delete_image($id)
+        {
+        	
+        	$this->RL_model->delete_image($id);
+        	redirect('slider_Images_show');
+        
+        }
+
+		/********************************/
+		/*  	 Update   Images        */
+		/********************************/
+        public function get_update_image($id)
+        {
+
+        	$get_signle_image = $this->RL_model->get_image_by_id($id);
+        	$this->load->view('backend/update_image', array('single_image_data' => $get_signle_image));
+
+        
+        }
+
+		/********************************/
+		/*  	 Update Images          */
+		/********************************/
+        public function post_update_image()
+        {
+        		## if user have not change images but change content ##
+        		##___________________________________________________##
+
+                $config['upload_path'] 			= './uploads/';
+                $config['allowed_types']        = 'gif|jpg|png';
+                $config['max_size']             = 5120; ## Exact 5 Mb
+                $config['max_width']            = 1800;
+                $config['max_height']           = 1200;
+
+                $this->upload->initialize($config);
+
+                if ( ! $this->upload->do_upload('userfile'))
+                {
+                        $usr_data = array(
+                        	'id' 		=> $this->input->post('id'),
+		                    'heading' 	=> $this->input->post('heading'),
+		                    'editor1' 	=> $this->input->post('editor1')
+                		);
+					
+						$usr_data['id'];
+						$usr_data['heading'];
+                		$usr_data['editor1']; 
+
+                		$this->RL_model->image_data_update_without_image($usr_data);                       
+                
+                }
+                else
+                {
+
+				## if user have  change images or other content ##
+        		##______________________________________________##
+
+                		$orignalName =$_FILES['userfile']['name'];
+                		$file_data = $this->upload->data();
+          				$data['img'] = base_url().'/uploads/'.$file_data['file_name'];
+						echo $mk_dir = 'uploads/'.$file_data['file_name'];
+						$rawName = $file_data['raw_name'];
+						$ext = $file_data['file_ext'];
+                        //$data = array('upload_data' => $this->upload->data());
+
+                        $usr_data = array(
+                        	'id' 		=> $this->input->post('id'),
+		                    'heading' => $this->input->post('heading'),
+		                    'editor1' => $this->input->post('editor1'),
+                		);
+
+                        $usr_data['id'];
+                		$usr_data['heading'];
+                		$usr_data['editor1'];
+
+                		## Slider Images Update Query ##
+                		$this->RL_model->image_data_update_with_image($usr_data, $orignalName);
+                        redirect('rl_view');
+
+                }
+
+        }
+	
 
 	
 	}

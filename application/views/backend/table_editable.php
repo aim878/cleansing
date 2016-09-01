@@ -41,8 +41,8 @@
 						<!-- END BEGIN STYLE CUSTOMIZER -->  
 						<!-- BEGIN PAGE TITLE & BREADCRUMB-->			
 						<h3 class="page-title">
-							Editable Tables				
-							<small>editable table samples</small>
+							Editable Table				
+							<small>editable table Slider Images</small>
 						</h3>
 						<ul class="breadcrumb">
 							<li>
@@ -81,12 +81,14 @@
 										</tr>
 									</thead>
 									<tbody>
+									<?php foreach($slider_data as $data) { ?>
 										<tr class="">
-											<td>awesome</td>
-											<td>this is awesoem</td>
-											<td><img src="<?php echo base_url(); ?>frontend/images/corporate/domestic.jpg"/ height="150px" width="200px;"></td>
-											<td><a class="edit" href="javascript:;">Edit</a>&nbsp;<a class="delete" href="javascript:;">Delete</a></td>
+											<td><?php echo $data->heading ?></td>
+											<td><?php echo $data->discription ?></td>
+											<td><img src="uploads/<?php echo $data->image ?>"/ height="150px" width="200px;"></td>
+											<td><a class="edit" href="<?php echo base_url();?>get_update_image/<?php echo $data->id ?>">Edit</a>&nbsp;<a class="delete" href="<?php echo base_url();?>delete_image/<?php echo $data->id ?>">Delete</a></td>
 										</tr>
+									<?php } ?>
 									</tbody>
 								</table>
 							</div>
@@ -101,4 +103,5 @@
 		<!-- END PAGE -->
 	</div>
 	<!-- END CONTAINER -->
+
 <?php include('includes/footer.php') ?>

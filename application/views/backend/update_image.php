@@ -64,9 +64,9 @@
 				<!-- END PAGE HEADER-->
 				<div id="dashboard">
 					<div class="row-fluid">
-						<div class="span6" style="height:0px;">
+						<div class="span6 hide">
 							<!-- BEGIN PORTLET-->
-							<div class="portlet solid bordered light-grey">
+							<div class="portlet solid bordered light-grey ">
 								<div class="portlet-body">
 									<div id="site_statistics_content" class="hide">
 										<div id="site_statistics" class="chart"></div>
@@ -75,9 +75,9 @@
 							</div>
 							<!-- END PORTLET-->
 						</div>
-						<div class="span6" style="height:0px;"">
+						<div class="span6 hide">
 							<!-- BEGIN PORTLET-->
-							<div class="portlet solid light-grey bordered hide">
+							<div class="portlet solid light-grey bordered">
 								<div class="portlet-body">
 									<div id="site_activities_content" class="hide">
 										<div id="site_activities" style="height:100px;"></div>
@@ -86,7 +86,7 @@
 							</div>
 							<!-- END PORTLET-->
 							<!-- BEGIN PORTLET-->
-							<div class="portlet solid bordered light-grey hide">
+							<div class="portlet solid bordered light-grey">
 								<div class="portlet-title">
 								</div>
 								<div class="portlet-body">
@@ -99,7 +99,7 @@
 						</div>
 						<div class="portlet box blue">
 		                     <div class="portlet-title">
-		                        <h4><i class="icon-reorder"></i>Image Upload..</h4>
+		                        <h4><i class="icon-reorder"></i>Update form</h4>
 		                        <div class="tools">
 		                           <a href="javascript:;" class="collapse"></a>
 		                           <a href="#portlet-config" data-toggle="modal" class="config"></a>
@@ -108,7 +108,7 @@
 		                        </div>
 		                     </div>
 							<div class="portlet-body form">	
-								<form class="form-horizontal" action="<?php echo base_url(); ?>image_upload" method="post" enctype="multipart/form-data">
+								<form class="form-horizontal" action="<?php echo base_url(); ?>post_update_image/" method="post" enctype="multipart/form-data">
 								<div class="alert alert-error">
 									<button class="close" data-dismiss="alert"></button>
 									<?php if(isset($error)){ ?>
@@ -118,10 +118,22 @@
 								    <div class="control-group">
 			                          <label class="control-label">Heading</label>
 			                          <div class="controls">
-			                             <input type="text" name="heading" class="span6 m-wrap popovers" data-trigger="hover" data-content="Popover body goes here. Popover body goes here." data-original-title="Popover header" required/>
+			                             <input type="text" name="heading" value="<?php echo $single_image_data[0]->heading; ?>" class="span6 m-wrap popovers" data-trigger="hover" data-content="Popover body goes here. Popover body goes here." data-original-title="Popover header" required/>
 			                          </div>
 			                        </div>
 			                        <div class="fileupload fileupload-new" data-provides="fileupload">
+									<div class="control-group">
+		                              <label class="control-label">Image Upload</label>
+		                              <div class="controls">
+		                                 <div class="fileupload fileupload-new" data-provides="fileupload">
+		                                    <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+		                                       <img src="<?php echo base_url(); ?>uploads/<?php echo $single_image_data[0]->image; ?>" alt="NO Image Found" />
+		                                    </div>
+		                                    <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+		                                    <br>
+		                              </div>
+			                        </div>		
+			                        <input type="hidden" name="id" value="<?php echo $single_image_data[0]->id; ?>"> <!-- hidden field for id -->	                        
 		                            <div class="control-group">
 		                              <label class="control-label">Default</label>
 		                              <div class="controls">
@@ -131,7 +143,7 @@
 			                        <div class="control-group">
                               			<label class="control-label">CKEditor</label>
                               			<div class="controls">
-                                 			<textarea class="span12 ckeditor m-wrap" name="editor1" rows="6"></textarea>
+                                 			<textarea class="span12 ckeditor m-wrap" name="editor1" rows="6"><?php echo $single_image_data[0]->discription; ?></textarea>
                               			</div>
                            		    </div>
 									<div class="form-actions">

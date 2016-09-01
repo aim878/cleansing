@@ -112,6 +112,9 @@
 
 		}
 
+		/********************************/
+		/* get All data related slider  */
+		/********************************/ 
 		public function get_slider_data()
 		{
 			$get_data = $this->db->query("SELECT * FROM slider")->result();
@@ -119,13 +122,65 @@
 			return $get_data;
 		}
 
-		public function image_data_update($usr_data, $orignalName){
-			echo $orignalName;
-			echo $heading = $usr_data['heading'];
-			echo $editor1 = $usr_data['editor1'];
-			echo $img_id  = $usr_data['image_id']; 
+		/********************************/
+		/* slider data Update,not image */
+		/********************************/ 
+		public function image_data_update_without_image($usr_data)
+		{
+			$id 	 = $usr_data['id'];
+			$heading = $usr_data['heading']; 
+			$editor1 = $usr_data['editor1'];
+			$img_id  = $usr_data['image_id'];
 
-			$get_data = $this->db->query("UPDATE slider SET heading = '$heading', discription = '$editor1', image = '$orignalName' WHERE id = '$img_id' ");
+			$this->db->query("UPDATE slider SET heading = '$heading', discription = '$editor1' WHERE id = '$id' ");
+			return;
+		}
+
+		/********************************/
+		/* slider data Update,and image */
+		/********************************/ 
+		public function image_data_update_with_image($usr_data, $orignalName)
+		{
+			$id 	 = $usr_data['id'];
+			$heading = $usr_data['heading']; 
+			$editor1 = $usr_data['editor1'];
+
+			echo $d= $this->db->query("UPDATE slider SET heading = '$heading', discription = '$editor1', image = '$orignalName' WHERE id = '$id' ");
+			return;
+
+		} 
+
+		/********************************/
+		/* slider data,new image insert */
+		/********************************/ 
+		public function image_data_upload($usr_data, $orignalName)
+		{
+			$orignalName;
+			echo $heading = $usr_data['heading']; 
+			echo $editor1 = $usr_data['editor1']; 
+
+			echo $this->db->query("INSERT INTO slider(heading, discription, image) VALUES('$heading', '$editor1', '$orignalName')");
+		}
+
+		/********************************/
+		/* delete Image, and data also  */
+		/********************************/
+		public function delete_image($id)
+		{
+
+			$get_data = $this->db->query("DELETE FROM slider WHERE id = '$id' ");
+			return $get_data;
+	
+		}
+
+		/********************************/
+		/* Fetch slider Images by slider*/
+		/********************************/
+		public function get_image_by_id($id)
+		{
+			$get_data = $this->db->query("SELECT * FROM slider where id = '$id' ")->result();
+			//print_r($get_data); exit;
+			return $get_data;	
 		}
 
 	}

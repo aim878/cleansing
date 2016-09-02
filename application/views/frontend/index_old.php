@@ -29,15 +29,15 @@
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="frontend/js/html5shiv.js"></script>
-      <script src="frontend/js/respond.min.js"></script>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
     <![endif]-->
 
-        <!--[if lte IE 7]><script src="<?php echo base_url(); ?>frontend/js/socialmediaicons-lte-ie7.js"></script><![endif]-->
+        <!--[if lte IE 7]><script src="js/socialmediaicons-lte-ie7.js"></script><![endif]-->
 
     <!-- LOAD JQUERY LIBRARY -->
 	<script type="text/javascript" src="<?php echo base_url(); ?>frontend/js/jquery-1.11.3.min.js"></script>
-    <script src="<?php echo base_url(); ?>frontend/http://maps.google.com/maps/api/js?sensor=false" 
+    <script src="http://maps.google.com/maps/api/js?sensor=false" 
           type="text/javascript"></script>
     <!-- MEGAFOLIO PRO GALLERY CSS JS FILES  -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>frontend/megafolio/css/settings.css" media="screen" />
@@ -68,12 +68,12 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>frontend/css/style-showbizpro.css" media="screen" />
 
 	<!-- THE SHOWBIZ JS FILES  -->
-	<!--<script type="text/javascript" src="frontend/showbizpro/js/jquery.themepunch.tools.min.js"></script>-->				
+	<!--<script type="text/javascript" src="showbizpro/js/jquery.themepunch.tools.min.js"></script>-->				
 	<script type="text/javascript" src="<?php echo base_url(); ?>frontend/showbizpro/js/jquery.themepunch.showbizpro.min.js"></script>
 
 	<!-- THE FANYCYBOX ASSETS -->
 	<link rel="stylesheet" href="<?php echo base_url(); ?>frontend/showbizpro/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-	<!--<script type="text/javascript" src="frontend/showbizpro/fancybox/jquery.fancybox.pack.js"></script> It must be disable for youtube and vimeo videos to inside the megafolio-->
+	<!--<script type="text/javascript" src="showbizpro/fancybox/jquery.fancybox.pack.js"></script> It must be disable for youtube and vimeo videos to inside the megafolio-->
         
 <!--ACTIVATE THE SHOWBIZPRO START-->
 <script type="text/javascript">
@@ -111,10 +111,10 @@
 
 				});
 
-			</script>
+</script>
 <!--ACTIVATE THE SHOWBIZPRO END-->    
     
-  </head>
+</head>
   <body>
   <!-- header start -->
   	<?php include('header.php'); ?>
@@ -125,20 +125,22 @@
       	
       	<!-- Content start -->
       	<div class="row">
-  		<div class="row showcase">	
+  		<div class="row showcase" style="color:#000000">	
         <!--
 		#################################
 			- REVOLUTION SLIDER START -
 		#################################
 		-->
+					
+					
                 	<div class="col-md-9" style="margin:0; padding:0;">
 					<div id="rev_slider_34_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container corporate" data-alias="news-gallery34" style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
 				<!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
-					<div id="rev_slider_34_1" class="rev_slider fullwidthabanner" data-version="5.0.7">
+					<div id="rev_slider_34_1" class="rev_slider fullwidthabanner" style="display:none; width:75%;" data-version="5.0.7">
 						<ul>	<!-- SLIDE  -->
-							<li data-index="rs-129" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url(); ?>frontend/images/corporate/corporate1-100x50.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Domestic Cleaning" data-description="Our pricing is transparent and straightforward">
+							<li data-index="rs-129" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url() ?>frontend/images/corporate/corporate1-100x50.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="<?php echo $slider_raw[0]->heading; ?>" data-description="<?php echo $slider_raw[0]->discription; ?>">
 								<!-- MAIN IMAGE -->
-								<img src="<?php echo base_url(); ?>frontend/images/corporate/domestic.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="uploads/<?php echo $slider_raw[0]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 1 -->
@@ -183,7 +185,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">Our pricing is transparent and straightforward.
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[0]->discription; ?>
 								</div>
 
 								<!-- LAYER NR. 3 -->
@@ -206,7 +208,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 7; white-space: nowrap;">Domestic Cleaning 
+									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[0]->heading; ?> 
 								</div>
 
 								<!-- LAYER NR. 4 -->
@@ -235,9 +237,9 @@
 								</div>
 							</li>
 							<!-- SLIDE  -->
-							<li data-index="rs-130" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/corporate/corporate2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Office Cleaning" data-description="First Impressions are imperative within a building">
+							<li data-index="rs-130" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url(); ?>frontend/images/corporate/corporate2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="<?php echo $slider_raw[1]->heading; ?>" data-description="<?php echo $slider_raw[1]->heading; ?>">
 								<!-- MAIN IMAGE -->
-								<img src="<?php echo base_url(); ?>frontend/images/corporate/office.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="uploads/<?php echo $slider_raw[1]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 1 -->
@@ -282,7 +284,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">First Impressions are imperative within a building 
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[1]->discription; ?>
 								</div>
 
 								<!-- LAYER NR. 3 -->
@@ -305,7 +307,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 7; white-space: nowrap;">Office Cleaning 
+									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[1]->heading; ?>
 								</div>
 
 								<!-- LAYER NR. 4 -->
@@ -334,9 +336,9 @@
 								</div>
 							</li>
 							<!-- SLIDE  -->
-							<li data-index="rs-131" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/corporate/corporate3-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Carpet Cleaning" data-description="We offers a professional, affordable carpet cleaning service">
+							<li data-index="rs-131" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url(); ?>frontend/images/corporate/corporate3-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="<?php echo $slider_raw[2]->heading; ?>" data-description="<?php echo $slider_raw[2]->discription; ?>">
 								<!-- MAIN IMAGE -->
-								<img src="<?php echo base_url(); ?>frontend/images/corporate/carpet.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="uploads/<?php echo $slider_raw[2]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 1 -->
@@ -381,7 +383,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">We offers a professional, affordable carpet cleaning service 
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[2]->discription; ?>
 								</div>
 
 								<!-- LAYER NR. 3 -->
@@ -404,7 +406,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 7; white-space: nowrap;">Carpet Cleaning
+									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[2]->heading; ?>
 								</div>
 
 								<!-- LAYER NR. 4 -->
@@ -433,9 +435,9 @@
 								</div>
 							</li>
 							<!-- SLIDE  -->
-							<li data-index="rs-132" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/corporate/corporate4-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="POWERFUL &amp; EFFECTIVE" data-description="Raise efficiency, cut downtime, and keep your projects on time.">
+							<li data-index="rs-132" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url(); ?>frontend/images/corporate/corporate4-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="<?php echo $slider_raw[3]->heading; ?>" data-description="<?php echo $slider_raw[3]->discription; ?>">
 								<!-- MAIN IMAGE -->
-								<img src="<?php echo base_url(); ?>frontend/images/corporate/corporate4.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="uploads/<?php echo $slider_raw[3]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 1 -->
@@ -480,7 +482,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">Raise efficiency, cut downtime, and keep your projects on time. 
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[2]->discription; ?>
 								</div>
 
 								<!-- LAYER NR. 3 -->
@@ -503,7 +505,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 7; white-space: nowrap;">POWERFUL &amp; EFFECTIVE 
+									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[3]->heading; ?> 
 								</div>
 
 								<!-- LAYER NR. 4 -->
@@ -565,7 +567,7 @@
                                         </div>
                                       </div>
                                       <div class="row top10 bottom20">
-                                        <div class="col-md-12 form_button">
+                                        <div class="col-md-12" style="margin:10px 0;">
                                           <input type="submit" data-loading-text="Loading..." class="btn btn-primary btn" value="Send Message">
                                         </div>
                                       </div>                    
@@ -712,75 +714,75 @@
   		<div class="row top-a top20 bottom50">
  			<div class="container">
                 <div class="divide20"></div>
-                <div class="style-title"><strong>Our Services</strong></div>
+                <div class="style-title">Our <strong>Services</strong></div>
                 <div class="separator">
                     <div class="separator-style"></div>
                 </div>
                 <div class="divide20"></div>
                 <div class="row">
                 <div class="col-md-4 col-sm-12 col-xs-12 padding-top20 wow fadeInUp">
-                  <div class="col-xs-2 service_domestic"><a href="#"></a></div>
+                  <div class="col-xs-2"> <span class="fa fa-home fa-2x river"></span> </div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">DOMESTIC</h4>
+                      <h4 class="black module-title"><?php echo $service_data[0]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>Providing your home with the utmost care and attention requires training and experience. We have a great miture of both. Our pricing is transparent and straightforward. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[0]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12 padding-top20 wow fadeInUp" >
-                  <div class="col-xs-2 service_office"><a href="#"></a></div>
+                  <div class="col-xs-2"> <span class="fa fa-building fa-2x river"></span> </div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">OFFICE</h4>
+                      <h4 class="black module-title"><?php echo $service_data[1]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>Anyclean focuses on achieving and maintaining the highest standards of cleanliness within your environment. This allows you as the customer to focus on your own. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[1]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12 padding-top20 wow fadeInUp">
-                  <div class="col-xs-2 service_removals"><a href="#"></a></div>
+                  <div class="col-xs-2"> <span class="fa fa-cube fa-2x river"></span> </div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">REMOVALS</h4>
+                      <h4 class="black module-title"><?php echo $service_data[2]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>Whether you need to relocate a single item or an entire house into or out of Slough, Reading, Bracknell, Buckinghamshire, Berkshire, ABC Removals has the solution for you. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[2]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12 padding-top20 wow fadeInUp">
-                  <div class="col-xs-2 service_carpet"><a href="#"></a></div>
+                  <div class="col-xs-2"> <img src="<?php echo base_url(); ?>frontend/images/icons/carpet_icon.png" /></div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">CARPET</h4>
+                      <h4 class="black module-title"><?php echo $service_data[3]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>We offers a professional, affordable carpet cleaning service in Slough, Reading,Maidenhead, West london and makes your home a healthier, more enjoyable living space. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[3]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12 padding-top20 wow fadeInUp">
-                  <div class="col-xs-2 service_edt"><a href="#"></a></div>
+                  <div class="col-xs-2"> <span class="fa fa-briefcase fa-2x river"></span> </div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">END OF TENANCYs</h4>
+                      <h4 class="black module-title"><?php echo $service_data[4]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>We use end of tenancy cleaning specialists, who continually work closely with inventory clerks, landlords and estate agents to maintain their cleaning checklists. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[4]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12 padding-top20 wow fadeInUp">
-                  <div class="col-xs-2 service_deep"><a href="#"></a> </div>
+                  <div class="col-xs-2"> <img src="<?php echo base_url(); ?>frontend/images/icons/deep_icon.png" /> </div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">DEEP CLEANING</h4>
+                      <h4 class="black module-title"><?php echo $service_data[5]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>We provide deep cleaning to residential and commercial properties across London. All our services are fully insured and guaranteed. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[5]->discription; ?> <a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
@@ -878,6 +880,164 @@
             </div>
         </div>
     </section>
+    
+    <div class="row" style="background-color:#333333; padding:20px 0;">
+    	<div class="container">
+        <div class="col-md-10">
+        	<h2 style="margin-top:3%; color:#fff;">GET HIGH QUALITY CLEANING SERVICES AT AFFORDABLE PRICE</h2>
+        </div>
+        <div class="col-md-2">
+        	<h2 style="margin-top:15%;"><a href="#" class="btn btn-primary" >GET A QUOTE</a></h2>
+        </div>
+        </div>
+    </div>
+    
+     <div class="row">
+     	<div class="col-md-3" style="background-color:#fff; padding:80px 0;" >
+        	<div class="row">
+            	<div class="col-md-5 col-xs-5" align="right">
+        			<img src="<?php echo base_url(); ?>frontend/images/icons/counter-1.png" />
+                </div>
+                <div class="col-md-7 col-xs-7" align="left">
+        			<h2 style="margin:0; font-weight:bold;font-size:40px;" class="counter">730</h2>
+                    <p>BUILDINGS CLEANED</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3" style="background-color:#eeeeee ; padding:80px 0;">
+        	<div class="row">
+            	<div class="col-md-5 col-xs-5" align="right">
+        			<img src="<?php echo base_url(); ?>frontend/images/icons/counter-2.png" />
+                </div>
+                <div class="col-md-7 col-xs-7" align="left">
+        			<h2 style="margin:0; font-weight:bold;font-size:40px;" class="counter">380</h2>
+                    <p>SATISFIED CLIENTS</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3" style="background-color:#fff; padding:80px 0;">
+        	<div class="row">
+            	<div class="col-md-5 col-xs-5" align="right">
+        			<img src="<?php echo base_url(); ?>frontend/images/icons/counter-3.png" />
+                </div>
+                <div class="col-md-7 col-xs-7" align="left">
+        			<h2 style="margin:0; font-weight:bold;font-size:40px;" class="counter">48</h2>
+                    <p>PROFESSIONAL STAFF</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3" style="background-color:#eeeeee; padding:80px 0;">
+        	<div class="row">
+            	<div class="col-md-5 col-xs-5" align="right">
+        			<img src="<?php echo base_url(); ?>frontend/images/icons/counter-4.png" />
+                </div>
+                <div class="col-md-7 col-xs-7" align="left">
+        			<h2 style="margin:0; font-weight:bold; font-size:40px;" class="counter">35</h2>
+                    <p>AWARDS WON</p>
+                </div>
+            </div>
+        </div>
+     </div>
+    
+	<!--// End Content Block 2-7 -->
+    
+    <!-- What we do Start -->
+          <section data-speed="10" data-type="background" style="background-color: #202427;">
+                    
+          <div class="container padding-top100 padding-bottom70" style="background:url(images/world-map-dark.png); no-repeat cover;">
+                  <div class='row'>
+				   
+                  	<div class="col-md-8">
+                    	<div>
+                        <h4 class="mod1">Areas We Cover</h4>
+                        </div>
+                        
+                   		<div id="map" style="width: 100%; height: 300px;"></div>
+                    </div>
+                    <div class='col-md-4'>
+                     <div class='text-center'>
+                    <h4 class="mod1">What People Say About Us</h4>
+                    </div>
+                      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                        <!-- Bottom Carousel Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#quote-carousel" data-slide-to="1"></li>
+                          <li data-target="#quote-carousel" data-slide-to="2"></li>
+                        </ol>
+                        
+                        <!-- Carousel Slides / Quotes -->
+                        <div class="carousel-inner">
+                        
+                          <!-- Quote 1 -->
+                          <div class="item active">
+                            <blockquote>
+                              <div class="row">
+                                <div class="col-sm-12 text-center">
+                                  <img class="img-circle" src="<?php echo base_url(); ?>frontend/images/person_1.png" style="width: 80px;height: 80px;" alt="">
+                                </div>
+                                <div class="col-sm-12 text-center">
+                                  <p class="mod1 concrete">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur!</p>
+                                  <small>Someone famous</small>
+                                </div>
+                              </div>
+                            </blockquote>
+                          </div>
+                          <!-- Quote 2 -->
+                          <div class="item">
+                            <blockquote>
+                              <div class="row">
+                                <div class="col-sm-12 text-center">
+                                  <img class="img-circle" src="<?php echo base_url(); ?>frontend/images/person_2.png" style="width: 80px;height: 80px;" alt="">
+                                </div>
+                                <div class="col-sm-12 text-center">
+                                  <p class="mod1 concrete">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor.</p>
+                                  <small>Someone famous</small>
+                                </div>
+                              </div>
+                            </blockquote>
+                          </div>
+                          <!-- Quote 3 -->
+                          <div class="item">
+                            <blockquote>
+                              <div class="row">
+                                <div class="col-sm-12 text-center">
+                                  <img class="img-circle" src="<?php echo base_url(); ?>frontend/images/person_3.png" style="width: 80px;height: 80px;" alt="">
+                                </div>
+                                <div class="col-sm-12 text-center">
+                                  <p class="mod1 concrete">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, mauris.</p>
+                                  <small>Someone famous</small>
+                                </div>
+                              </div>
+                            </blockquote>
+                          </div>
+                        </div>
+                        
+                        <!-- Carousel Buttons Next/Prev -->
+                        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left silver"></i></a>
+                        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right silver"></i></a>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="row">
+                  		<div style="margin:3% 0 0 1.5%;">
+                        <h4 class="mod1">Contact Details</h4>
+                        </div>
+                  <div class="col-md-4" align="left"> 
+                 	 <p><i class="fa fa-map-marker"></i>  Unit 848 Plymouth Road Slough, Berkshire, SL14LP</span></p>
+                  </div>
+                  <div class="col-md-2" align="left">
+                  	 <p><i class="fa fa-phone"></i><?php echo $contact_info[0]->primary_phone; ?></p>
+                  </div>
+                  <div class="col-md-2" align="left">
+                  	 <p><i class="fa fa-envelope-o"></i><a href="mailto:#">  contact@example.com</a></p>
+                  </div>
+                  </div>
+          </div>
+                    
+  		  </section>      
+ 
+    <!-- inner-top start -->
     <div class="row inner-top bottom20">
    	  <div class="container">
       <!-- Logos Start -->
@@ -1024,164 +1184,6 @@
       <!-- Logos End -->
       </div>
     </div>
-    <div class="row" style="background-color:#333333; padding:20px 0;">
-    	<div class="container">
-        <div class="col-md-10">
-        	<h2 style="margin-top:3%; color:#fff;">GET HIGH QUALITY CLEANING SERVICES AT AFFORDABLE PRICE</h2>
-        </div>
-        <div class="col-md-2">
-        	<h2 style="margin-top:15%;"><a href="#" class="btn btn-primary" >GET A QUOTE</a></h2>
-        </div>
-        </div>
-    </div>
-    
-     <div class="row">
-     	<div class="col-md-3" style="background-color:#fff; padding:80px 0;" >
-        	<div class="row">
-            	<div class="col-md-5 col-xs-5" align="right">
-        			<img src="<?php echo base_url(); ?>frontend/images/icons/counter-1.png" />
-                </div>
-                <div class="col-md-7 col-xs-7" align="left">
-        			<h2 style="margin:0; font-weight:bold;font-size:40px;" class="counter">730</h2>
-                    <p>BUILDINGS CLEANED</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3" style="background-color:#eeeeee ; padding:80px 0;">
-        	<div class="row">
-            	<div class="col-md-5 col-xs-5" align="right">
-        			<img src="<?php echo base_url(); ?>frontend/images/icons/counter-2.png" />
-                </div>
-                <div class="col-md-7 col-xs-7" align="left">
-        			<h2 style="margin:0; font-weight:bold;font-size:40px;" class="counter">380</h2>
-                    <p>SATISFIED CLIENTS</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3" style="background-color:#fff; padding:80px 0;">
-        	<div class="row">
-            	<div class="col-md-5 col-xs-5" align="right">
-        			<img src="<?php echo base_url(); ?>frontend/images/icons/counter-3.png" />
-                </div>
-                <div class="col-md-7 col-xs-7" align="left">
-        			<h2 style="margin:0; font-weight:bold;font-size:40px;" class="counter">48</h2>
-                    <p>PROFESSIONAL STAFF</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3" style="background-color:#eeeeee; padding:80px 0;">
-        	<div class="row">
-            	<div class="col-md-5 col-xs-5" align="right">
-        			<img src="<?php echo base_url(); ?>frontend/images/icons/counter-4.png" />
-                </div>
-                <div class="col-md-7 col-xs-7" align="left">
-        			<h2 style="margin:0; font-weight:bold; font-size:40px;" class="counter">35</h2>
-                    <p>AWARDS WON</p>
-                </div>
-            </div>
-        </div>
-     </div>
-    
-	<!--// End Content Block 2-7 -->
-    
-    <!-- What we do Start -->
-          <section data-speed="10" data-type="background" style="background-color: #202427;">
-                    
-          <div class="container padding-top100 padding-bottom70" style="background:url(<?php echo base_url() ?>frontend/images/world-map-dark.png); no-repeat cover;">
-                  <div class='row'>
-				   
-                  	<div class="col-md-8">
-                    	<div>
-                        <h3 class="mod1" style="color:#fff;font-weight:bold;margin:0 0 3%;">Areas We Cover</h3>
-                        </div>
-                        
-                   		<div id="map" style="width: 100%; height: 300px;"></div>
-                    </div>
-                    <div class='col-md-4'>
-                     <div class='text-center'>
-                    <h3 class="mod1" style="color:#fff;font-weight:bold;margin:0 0 3%;">What People Say About Us</h3>
-                    </div>
-                      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-                        <!-- Bottom Carousel Indicators -->
-                        <ol class="carousel-indicators">
-                          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-                          <li data-target="#quote-carousel" data-slide-to="1"></li>
-                          <li data-target="#quote-carousel" data-slide-to="2"></li>
-                        </ol>
-                        
-                        <!-- Carousel Slides / Quotes -->
-                        <div class="carousel-inner">
-                        
-                          <!-- Quote 1 -->
-                          <div class="item active">
-                            <blockquote>
-                              <div class="row">
-                                <div class="col-sm-12 text-center">
-                                  <img class="img-circle" src="<?php echo base_url(); ?>frontend/images/person_1.png" style="width: 80px;height: 80px;" alt="">
-                                </div>
-                                <div class="col-sm-12 text-center">
-                                  <p class="mod1 concrete">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur!</p>
-                                  <small>Someone famous</small>
-                                </div>
-                              </div>
-                            </blockquote>
-                          </div>
-                          <!-- Quote 2 -->
-                          <div class="item">
-                            <blockquote>
-                              <div class="row">
-                                <div class="col-sm-12 text-center">
-                                  <img class="img-circle" src="<?php echo base_url(); ?>frontend/images/person_2.png" style="width: 80px;height: 80px;" alt="">
-                                </div>
-                                <div class="col-sm-12 text-center">
-                                  <p class="mod1 concrete">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor.</p>
-                                  <small>Someone famous</small>
-                                </div>
-                              </div>
-                            </blockquote>
-                          </div>
-                          <!-- Quote 3 -->
-                          <div class="item">
-                            <blockquote>
-                              <div class="row">
-                                <div class="col-sm-12 text-center">
-                                  <img class="img-circle" src="<?php echo base_url(); ?>frontend/images/person_3.png" style="width: 80px;height: 80px;" alt="">
-                                </div>
-                                <div class="col-sm-12 text-center">
-                                  <p class="mod1 concrete">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, mauris.</p>
-                                  <small>Someone famous</small>
-                                </div>
-                              </div>
-                            </blockquote>
-                          </div>
-                        </div>
-                        
-                        <!-- Carousel Buttons Next/Prev -->
-                        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left silver"></i></a>
-                        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right silver"></i></a>
-                      </div>                      
-                    </div>
-                  </div>
-                  <div class="row">
-                  		<div style="margin:3% 0 0 1.5%;">
-                        <h4 class="mod1">Contact Details</h4>
-                        </div>
-                  <div class="col-md-4" align="left"> 
-                 	 <p><i class="fa fa-map-marker"></i>  Unit 848 Plymouth Road Slough, Berkshire, SL14LP</p>
-                  </div>
-                  <div class="col-md-2" align="left">
-                  	 <p><i class="fa fa-phone"></i>  07 557 872841</p>
-                  </div>
-                  <div class="col-md-2" align="left">
-                  	 <p><i class="fa fa-envelope-o"></i><a href="<?php echo base_url(); ?>frontend/mailto:#" style="color:#747474;">  contact@example.com</a></p>
-                  </div>
-                  </div>
-          </div>
-                    
-  		  </section>      
- 
-    <!-- inner-top start -->
-    
   	<?php include('footer.php'); ?>
     <span id="scroll-to-top">
       <a class="scroll-up">
@@ -1196,7 +1198,7 @@
     <!-- Custom JS -->
     <script type="text/javascript" src="<?php echo base_url(); ?>frontend/js/custom.js"></script>
     
-    <script src="<?php echo base_url(); ?>frontend/js/parallax-scrolling-script.js"></script>
+      <script src="<?php echo base_url(); ?>frontend/js/parallax-scrolling-script.js"></script>
     <script src="<?php echo base_url(); ?>frontend/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>frontend/js/wow.js"></script>
     <script src="<?php echo base_url(); ?>frontend/js/jquery.counterup.min.js"></script>

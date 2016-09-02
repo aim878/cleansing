@@ -10,22 +10,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="<?php echo base_url(); ?>frontend/css/bootstrap.min.css">
     
-    <link rel="stylesheet" type="text/css" href="css/navbar-news.css">
-    <link rel="stylesheet" type="text/css" href="css/color/red.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/header-fullwidth.css">
-    <link rel="stylesheet" type="text/css" href="css/tools.css">
-    <link rel="stylesheet" type="text/css" href="css/footer-dark.css">
-    <link rel="stylesheet" type="text/css" href="css/socialmediaicons.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive-news.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>frontend/css/navbar-news.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>frontend/css/color/red.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>frontend/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>frontend/css/header-fullwidth.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>frontend/css/tools.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>frontend/css/footer-dark.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>frontend/css/socialmediaicons.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>frontend/css/responsive-news.css">
     
     <!-- MegaMenu styles-->
-    <link href="css/megamenu.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>frontend/css/megamenu.css" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>frontend/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -33,23 +33,23 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
 
-        <!--[if lte IE 7]><script src="js/socialmediaicons-lte-ie7.js"></script><![endif]-->
+        <!--[if lte IE 7]><script src="<?php echo base_url(); ?>frontend/js/socialmediaicons-lte-ie7.js"></script><![endif]-->
 
     <!-- LOAD JQUERY LIBRARY -->
-	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>frontend/js/jquery-1.11.3.min.js"></script>
     
     <!-- Favicons -->
-		<link rel="shortcut icon" href="images/favicon.ico">
-		<link rel="apple-touch-icon" href="images/apple-touch-icon.html">
-		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.html">
-		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.html">
-		<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.html">
+		<link rel="shortcut icon" href="<?php echo base_url(); ?>frontend/images/favicon.ico">
+		<link rel="apple-touch-icon" href="<?php echo base_url(); ?>frontend/images/apple-touch-icon.html">
+		<link rel="apple-touch-icon" sizes="72x72" href="<?php echo base_url(); ?>frontend/images/apple-touch-icon-72x72.html">
+		<link rel="apple-touch-icon" sizes="114x114" href="<?php echo base_url(); ?>frontend/images/apple-touch-icon-114x114.html">
+		<link rel="apple-touch-icon" sizes="144x144" href="<?php echo base_url(); ?>frontend/images/apple-touch-icon-144x144.html">
     
     <!-- For Sticky Header -->
-    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>frontend/js/custom.js"></script>
     
   <!-- for Animation Elements -->
-    <script src="js/wow.js"></script>
+    <script src="<?php echo base_url(); ?>frontend/js/wow.js"></script>
     
   </head>
   <body>
@@ -97,7 +97,7 @@
                         <div class="col-xs-10">
                             <address>
                               <strong>07 557 872841</strong><br>
-                              <a href="mailto:#" class="sunflower">first.last@example.com</a>
+                              <a href="<?php echo base_url(); ?>frontend/mailto:#" class="sunflower">first.last@example.com</a>
                             </address>
                         </div>
 
@@ -200,7 +200,7 @@
               <div class="row-fluid">
               
               
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.3181843995335!2d-0.6435956846593504!3d51.52572361718512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487664b9b1f5e08b%3A0x449be9a9d52d2788!2s848+Plymouth+Rd%2C+Slough+SL1+4LP%2C+UK!5e0!3m2!1sen!2s!4v1471358669731" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+             <iframe src="<?php echo base_url(); ?>frontend/https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.3181843995335!2d-0.6435956846593504!3d51.52572361718512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487664b9b1f5e08b%3A0x449be9a9d52d2788!2s848+Plymouth+Rd%2C+Slough+SL1+4LP%2C+UK!5e0!3m2!1sen!2s!4v1471358669731" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                          
                  
               </div>		
@@ -209,7 +209,7 @@
         <!-- Google Map for Header End -->
         
  	</div>
-    	<?php include('footer.php'); ?>
+    	<?php include('footer2.php'); ?>
 
  	<!-- scroll-to-top start -->
     <span id="scroll-to-top">
@@ -223,13 +223,13 @@
   	    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster--> 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>frontend/js/bootstrap.min.js"></script>
     
     <!-- for Mega Menu -->
-    <script src="js/for_megamenu_run_prettify.js"></script>
+    <script src="<?php echo base_url(); ?>frontend/js/for_megamenu_run_prettify.js"></script>
     
     <!-- for Retina Graphics -->
-    <script type="text/javascript" src="js/retina.js"></script> 
+    <script type="text/javascript" src="<?php echo base_url(); ?>frontend/js/retina.js"></script> 
   </body>
 
 <!-- Mirrored from demo.artofthemes.com/html/proflex/page-contactus.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Dec 2015 05:16:09 GMT -->

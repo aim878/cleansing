@@ -255,7 +255,7 @@ website:   	http://www.themepunch.com
 /**********************************************
 	-	FULLSCREEN AND FULLWIDHT CONTAINERS	-
 **********************************************/
-.rev_slider_wrapper	{	width:100%;}
+.rev_slider_wrapper	{	width:75%;}
 
 .fullscreen-container {	
 	position:relative;
@@ -270,10 +270,12 @@ website:   	http://www.themepunch.com
 }
 
 .fullwidthbanner-container .fullwidthabanner{
-	width:100%;
+	width:75%;
 	position:relative;
 }
-
+.rev_slider{
+	width:75%;	
+}
 
 
 /*********************************

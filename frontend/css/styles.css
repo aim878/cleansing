@@ -1161,12 +1161,29 @@ ul.project-details {
 /*color: #ffffff;*/
 }
 
-
+.header-top-icon3mobile{
+	display:none;	
+}
 /*	Content Block 2-8 MEDIA QUERIES
 /*----------------------------------------------------*/
 
 /* Small Devices, Tablets */
+
+@media only screen and (max-width : 480px) {
+.rev_slider{
+	width:100% !important;	
+}
+.header-top-icon3mobile{
+	margin-top:1%;	
+	display:block;
+}
+.img-responsive{
+	width:150px;	
+}
+}
+
 @media only screen and (min-width : 768px) {
+
 }
 
 /* Medium Devices, Desktops */
@@ -1225,9 +1242,42 @@ ul.project-details {
 /*	Content Block 1-6 MEDIA QUERIES
 /*----------------------------------------------------*/
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+.img-responsive {
+	width: 150px !important;
+	}
+
+}
+
+
+@media (min-width: 992px) {
+/* Styles */
+
+.form_button{
+	margin:10px 0;	
+}
+
+}
+
+@media only screen and (min-device-width : 1361px) and (max-device-width : 1366px) {
+/* Styles */
+.img-responsive {
+	width: 150px !important;
+	}
+.form_button{
+	margin:11px 0;	
+}
+
+}
+
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
  .content-1-6 .client-row .row-wrapper border-bottom: none;
+ 
+ .height-topown {
+    height: 60px !important;
+	}
 }
 .content-1-6 .row-wrapper .col-md-3 {
 	border-right: none;
@@ -1236,6 +1286,9 @@ ul.project-details {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	.desktop_header_banner{
+		display:none;	
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -2939,3 +2992,85 @@ i.fa:hover { /*top:-5px; */
  /* ====================================================================================================================
  * Contact Form Styles End
  * ====================================================================================================================*/
+.service_domestic a{
+	background-image:url('../images/icons/domestic_cleansing.png');
+	width:32px;
+	height:32px;
+	display: block;
+}
+.service_domestic a:hover{
+	background-image:url('../images/icons/domestic_cleansing1.png');
+	width:32px;
+	height:32px;
+	display: block;
+}
+
+.service_office a{
+	background-image:url('../images/icons/office_cleansing.png');
+	width:32px;
+	height:32px;
+	display: block;
+}
+.service_office a:hover{
+	background-image:url('../images/icons/office_cleansing1.png');
+	width:32px;
+	height:32px;
+	display: block;
+}
+
+.service_removals a{
+	background-image:url('../images/icons/removels.png');
+	width:32px;
+	height:32px;
+	display: block;
+}
+.service_removals a:hover{
+	background-image:url('../images/icons/removels1.png');
+	width:32px;
+	height:32px;
+	display: block;
+}
+
+.service_carpet a{
+	background-image:url('../images/icons/carpet_cleaning.png');
+	width:32px;
+	height:32px;
+	display: block;
+}
+.service_carpet a:hover{
+	background-image:url('../images/icons/carpet_cleaning1.png');
+	width:32px;
+	height:32px;
+	display: block;
+}
+
+.service_edt a{
+	background-image:url('../images/icons/end_tenancy.png');
+	width:32px;
+	height:32px;
+	display: block;
+}
+.service_edt a:hover{
+	background-image:url('../images/icons/end_tenancy1.png');
+	width:32px;
+	height:32px;
+	display: block;
+}
+
+.service_deep a{
+	background-image:url('../images/icons/deep_cleaning.png');
+	width:32px;
+	height:32px;
+	display: block;
+}
+.service_deep a:hover{
+	background-image:url('../images/icons/deep_cleaning1.png');
+	width:32px;
+	height:32px;
+	display: block;
+}
+
+.form_button{
+	margin:10px 0;	
+}
+

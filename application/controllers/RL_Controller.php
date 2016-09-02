@@ -413,7 +413,7 @@
 
         		## Slider Images Update Query ##
         		$this->RL_model->services_data_insert($usr_data);
-                redirect('rl_view');
+                redirect('services_data_show');
         }
 	
 

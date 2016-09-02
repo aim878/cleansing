@@ -200,7 +200,7 @@
 		public function get_services_data()
 		{
 
-			$get_data = $this->db->query("SELECT * FROM services")->result();
+			$get_data = $this->db->query("SELECT * FROM services ORDER BY id DESC")->result();
 			//print_r($get_data); exit;
 			return $get_data;
 		}

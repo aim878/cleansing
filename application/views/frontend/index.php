@@ -724,10 +724,10 @@
                   <div class="col-xs-2"> <span class="fa fa-home fa-2x river"></span> </div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">DOMESTIC</h4>
+                      <h4 class="black module-title"><?php echo $service_data[0]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>Providing your home with the utmost care and attention requires training and experience. We have a great miture of both. Our pricing is transparent and straightforward. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[0]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
@@ -735,10 +735,10 @@
                   <div class="col-xs-2"> <span class="fa fa-building fa-2x river"></span> </div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">OFFICE</h4>
+                      <h4 class="black module-title"><?php echo $service_data[1]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>Anyclean focuses on achieving and maintaining the highest standards of cleanliness within your environment. This allows you as the customer to focus on your own. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[1]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
@@ -746,10 +746,10 @@
                   <div class="col-xs-2"> <span class="fa fa-cube fa-2x river"></span> </div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">REMOVALS</h4>
+                      <h4 class="black module-title"><?php echo $service_data[2]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>Whether you need to relocate a single item or an entire house into or out of Slough, Reading, Bracknell, Buckinghamshire, Berkshire, ABC Removals has the solution for you. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[2]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
@@ -757,10 +757,10 @@
                   <div class="col-xs-2"> <img src="<?php echo base_url(); ?>frontend/images/icons/carpet_icon.png" /></div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">CARPET</h4>
+                      <h4 class="black module-title"><?php echo $service_data[3]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>We offers a professional, affordable carpet cleaning service in Slough, Reading,Maidenhead, West london and makes your home a healthier, more enjoyable living space. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[3]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
@@ -768,10 +768,10 @@
                   <div class="col-xs-2"> <span class="fa fa-briefcase fa-2x river"></span> </div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">END OF TENANCYs</h4>
+                      <h4 class="black module-title"><?php echo $service_data[4]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>We use end of tenancy cleaning specialists, who continually work closely with inventory clerks, landlords and estate agents to maintain their cleaning checklists. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[4]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
@@ -779,10 +779,10 @@
                   <div class="col-xs-2"> <img src="<?php echo base_url(); ?>frontend/images/icons/deep_icon.png" /> </div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">DEEP CLEANING</h4>
+                      <h4 class="black module-title"><?php echo $service_data[5]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>We provide deep cleaning to residential and commercial properties across London. All our services are fully insured and guaranteed. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[5]->discription; ?> <a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>

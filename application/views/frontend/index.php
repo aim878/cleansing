@@ -138,9 +138,9 @@
 				<!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
 					<div id="rev_slider_34_1" class="rev_slider fullwidthabanner" style="display:none; width:75%;" data-version="5.0.7">
 						<ul>	<!-- SLIDE  -->
-							<li data-index="rs-129" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url() ?>frontend/images/corporate/corporate1-100x50.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Domestic Cleaning" data-description="Our pricing is transparent and straightforward">
+							<li data-index="rs-129" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url() ?>frontend/images/corporate/corporate1-100x50.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="<?php echo $slider_raw[0]->heading; ?>" data-description="<?php echo $slider_raw[0]->discription; ?>">
 								<!-- MAIN IMAGE -->
-								<img src="<?php echo base_url(); ?>frontend/images/corporate/domestic.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="uploads/<?php echo $slider_raw[0]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 1 -->
@@ -185,7 +185,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">Our pricing is transparent and straightforward.
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[0]->discription; ?>
 								</div>
 
 								<!-- LAYER NR. 3 -->
@@ -208,7 +208,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 7; white-space: nowrap;">Domestic Cleaning 
+									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[0]->heading; ?> 
 								</div>
 
 								<!-- LAYER NR. 4 -->
@@ -237,9 +237,9 @@
 								</div>
 							</li>
 							<!-- SLIDE  -->
-							<li data-index="rs-130" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url(); ?>frontend/images/corporate/corporate2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Office Cleaning" data-description="First Impressions are imperative within a building">
+							<li data-index="rs-130" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url(); ?>frontend/images/corporate/corporate2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="<?php echo $slider_raw[1]->heading; ?>" data-description="<?php echo $slider_raw[1]->heading; ?>">
 								<!-- MAIN IMAGE -->
-								<img src="<?php echo base_url(); ?>frontend/images/corporate/office.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="uploads/<?php echo $slider_raw[1]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 1 -->
@@ -284,7 +284,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">First Impressions are imperative within a building 
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[1]->discription; ?>
 								</div>
 
 								<!-- LAYER NR. 3 -->
@@ -307,7 +307,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 7; white-space: nowrap;">Office Cleaning 
+									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[1]->heading; ?>
 								</div>
 
 								<!-- LAYER NR. 4 -->
@@ -336,9 +336,9 @@
 								</div>
 							</li>
 							<!-- SLIDE  -->
-							<li data-index="rs-131" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url(); ?>frontend/images/corporate/corporate3-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Carpet Cleaning" data-description="We offers a professional, affordable carpet cleaning service">
+							<li data-index="rs-131" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url(); ?>frontend/images/corporate/corporate3-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="<?php echo $slider_raw[2]->heading; ?>" data-description="<?php echo $slider_raw[2]->discription; ?>">
 								<!-- MAIN IMAGE -->
-								<img src="<?php echo base_url(); ?>frontend/images/corporate/carpet.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="uploads/<?php echo $slider_raw[2]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 1 -->
@@ -383,7 +383,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">We offers a professional, affordable carpet cleaning service 
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[2]->discription; ?>
 								</div>
 
 								<!-- LAYER NR. 3 -->
@@ -406,7 +406,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 7; white-space: nowrap;">Carpet Cleaning
+									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[2]->heading; ?>
 								</div>
 
 								<!-- LAYER NR. 4 -->
@@ -435,9 +435,9 @@
 								</div>
 							</li>
 							<!-- SLIDE  -->
-							<li data-index="rs-132" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url(); ?>frontend/images/corporate/corporate4-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="POWERFUL &amp; EFFECTIVE" data-description="Raise efficiency, cut downtime, and keep your projects on time.">
+							<li data-index="rs-132" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url(); ?>frontend/images/corporate/corporate4-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="<?php echo $slider_raw[3]->heading; ?>" data-description="<?php echo $slider_raw[3]->discription; ?>">
 								<!-- MAIN IMAGE -->
-								<img src="<?php echo base_url(); ?>frontend/images/corporate/corporate4.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="uploads/<?php echo $slider_raw[3]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 1 -->
@@ -482,7 +482,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">Raise efficiency, cut downtime, and keep your projects on time. 
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[2]->discription; ?>
 								</div>
 
 								<!-- LAYER NR. 3 -->
@@ -505,7 +505,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 7; white-space: nowrap;">POWERFUL &amp; EFFECTIVE 
+									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[3]->heading; ?> 
 								</div>
 
 								<!-- LAYER NR. 4 -->
@@ -1027,7 +1027,7 @@
                  	 <p><i class="fa fa-map-marker"></i>  Unit 848 Plymouth Road Slough, Berkshire, SL14LP</span></p>
                   </div>
                   <div class="col-md-2" align="left">
-                  	 <p><i class="fa fa-phone"></i>  07 557 872841</p>
+                  	 <p><i class="fa fa-phone"></i><?php echo $contact_info[0]->primary_phone; ?></p>
                   </div>
                   <div class="col-md-2" align="left">
                   	 <p><i class="fa fa-envelope-o"></i><a href="mailto:#">  contact@example.com</a></p>

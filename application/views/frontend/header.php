@@ -35,7 +35,7 @@ contact@example.com</a>
                         <div class="col-xs-10 header-top-icon3" align="center">
                             <address>
                               <strong style="font-size:16px;">24/7 Customer Support</strong><br>
-                              <a href="tel:+07-557-872841" style="font-size:22px;" class="sunflower">07 557 872841</a>
+                              <a href="tel:+07-557-872841" style="font-size:22px;" class="sunflower"><?php echo $contact_info[0]->primary_phone; ?></a>
                             </address>
                         </div>
 
@@ -52,21 +52,21 @@ contact@example.com</a>
                         	<div class="row">
                             	 <div class="col-xs-6">
                                  <strong style="color:#fff; font-size:14px;">Berkshire:</strong><br>
-                         		 <span class="finn">01753 780 159</span>
+                         		 <span class="finn"><?php echo $contact_info[0]->secondary_phone1; ?></span>
                                  </div>
                                  <div class="col-xs-6">
                                  <strong style="color:#fff; font-size:14px;">Buckinghamshire:</strong><br>
-                          <span class="finn">01494 957 523</span>
+                          <span class="finn"><?php echo $contact_info[0]->secondary_phone2; ?></span>
                                  </div>
                             </div>
                             <div class="row">
                             	 <div class="col-xs-6">
                                  <strong style="color:#fff; font-size:14px;">Surrey:</strong><br>
-                          <span class="finn">01483 662 557</span>
+                          <span class="finn"><?php echo $contact_info[0]->secondary_phone3; ?></span>
                                  </div>
                                  <div class="col-xs-6">
                                  <strong style="color:#fff; font-size:14px;">Oxfordshire</strong><br>
-                          <span class="finn">01865 689 946</span>
+                          <span class="finn"><?php echo $contact_info[0]->secondary_phone4; ?></span>
                                  </div>
                             
                             </div>

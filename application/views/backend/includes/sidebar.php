@@ -37,6 +37,8 @@
 					<ul class="sub">
 						<li ><a href="<?php echo base_url(); ?>slider_Images_show">Slider data</a></li>
 						<li ><a href="<?php echo base_url(); ?>services_data_show">Services</a></li>
+						<li ><a href="<?php echo base_url(); ?>contact_info_data_show">Contact</a></li>
+
 					</ul>
 				</li>
 				<li class="has-sub ">
@@ -48,11 +50,7 @@
 					<ul class="sub">
 						<li ><a href="<?php echo base_url(); ?>usr_profile">slider form</a></li>
 						<li ><a href="<?php echo base_url(); ?>get_services_view"">services form</a></li>
-						<li ><a href="form_component.html">Form Components</a></li>
-						<li ><a href="form_wizard.html">Form Wizard</a></li>
-						<li ><a href="form_validation.html">Form Validation</a></li>
-						<li ><a href="form_fileupload.html">Multiple File Upload</a></li>
-						<li ><a href="form_dropzone.html">Dropzone File Upload</a></li>
+						<li ><a href="<?php echo base_url(); ?>get_services_view"">contact_info form</a></li>
 					</ul>
 				</li>
 			</ul>

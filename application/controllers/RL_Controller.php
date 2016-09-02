@@ -46,8 +46,15 @@
 		/********************************/
 		public function index()
 		{
-			$slider_raw_data = $this->RL_model->get_slider_data();
-			$this->load->view('frontend/index', array('slider_raw' => $slider_raw_data ));
+			$slider_raw_data  = $this->RL_model->get_slider_data();
+			$contact_raw_data = $this->RL_model->get_contact_info_data();
+			$service_raw_data = $this->RL_model->get_services_data();
+			
+			$this->load->view('frontend/index', array(
+				'slider_raw' => $slider_raw_data,
+				'contact_info' => $contact_raw_data,
+				'service_data' => $service_raw_data
+			));
 		
 		}
  
@@ -431,6 +438,11 @@
         
         }
 
+
+
+        /********************************/
+		/*     Update Service Data      */
+		/********************************/
         public function get_update_services($id)
         {
 
@@ -439,6 +451,9 @@
         
         }
 
+        /********************************/
+		/*     Post | Service Data      */
+		/********************************/
         public function post_update_services()
         {
 
@@ -456,6 +471,94 @@
     		redirect('services_data_show');
 
 
+        }
+
+		/////////////////////////////////
+		///   Contact info Segment    ///
+		/////////////////////////////////
+		/********************************/
+		/* 	  contact info view         */
+		/********************************/
+        public function get_contact_info_view()
+        {
+        	$this->load->view('backend/contact_info_form');
+        }
+
+
+		/********************************/
+		/* 	    post service data       */
+		/********************************/
+        public function post_contact_info_data()
+        {
+        	$usr_data = array(
+		                    'email' 		   => $this->input->post('email'),
+		                    'address' 		   => $this->input->post('address'),
+		                    'primary_phone'    => $this->input->post('primary_phone'),
+		                    'secondary_phone1' => $this->input->post('secondary_phone1'),
+		                    'secondary_phone2' => $this->input->post('secondary_phone2'),
+		                    'secondary_phone3' => $this->input->post('secondary_phone3'),
+		                    'secondary_phone4' => $this->input->post('secondary_phone4')
+                		);
+
+
+        		## Slider Images Update Query ##
+        		$this->RL_model->contact_info_data_insert($usr_data);
+                redirect('contact_info_data_show');
+        }
+
+        /**********************************/
+		/*contact_info_data show in table */
+		/**********************************/
+        public function contact_info_data_show()
+        {
+
+        	$array_data = $this->RL_model->get_contact_info_data();
+        	$this->load->view('backend/contact_info_editable', array('contact_info_data' => $array_data));
+
+        }
+
+        /**********8************************/
+		/*update contact_info_data in table*/
+		/***********************************/
+        public function get_update_contact_info($id)
+        {
+
+        	$get_signle_contact = $this->RL_model->get_contact_by_id($id);
+        	$this->load->view('backend/contact_info_update', array('get_signle_contact' => $get_signle_contact));
+        }
+
+        /********************************/
+		/*     Post update contact info */
+		/********************************/
+        public function post_update_contact_info()
+        {
+
+            $usr_data = array(
+            	'id' 			   => $this->input->post('id'),
+                'email' 		   => $this->input->post('email'),
+                'address' 		   => $this->input->post('address'),
+                'primary_phone'    => $this->input->post('primary_phone'),
+                'secondary_phone1' => $this->input->post('secondary_phone1'),
+                'secondary_phone2' => $this->input->post('secondary_phone2'),
+                'secondary_phone3' => $this->input->post('secondary_phone3'),
+                'secondary_phone4' => $this->input->post('secondary_phone4'),
+
+    		);
+
+    		$this->RL_model->contact_info_update($usr_data);
+    		redirect('contact_info_data_show');
+
+
+        }
+
+        /********************************/
+		/*  	 Services   Data        */
+		/********************************/
+        public function delete_contact($id)
+        {
+        	$this->RL_model->delete_contact($id);
+        	redirect('contact_info_data_show');
+        
         }
 
 	}

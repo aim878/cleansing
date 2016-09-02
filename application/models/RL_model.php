@@ -117,7 +117,7 @@
 		/********************************/ 
 		public function get_slider_data()
 		{
-			$get_data = $this->db->query("SELECT * FROM slider")->result();
+			$get_data = $this->db->query("SELECT * FROM slider ORDER BY id DESC")->result();
 			//print_r($get_data); exit;
 			return $get_data;
 		}
@@ -194,6 +194,9 @@
 
 		}
 
+		/********************************/
+		/*    Fetch All Serceic data    */
+		/********************************/
 		public function get_services_data()
 		{
 
@@ -213,6 +216,9 @@
 	
 		}
 
+		/********************************/
+		/*      Fetch service by id     */
+		/********************************/
 		public function get_service_by_id($id)
 		{
 
@@ -221,19 +227,93 @@
 			return $get_data;	
 		}
 
+		/********************************/
+		/*    service update by id      */
+		/********************************/
 		public function service_data_update($usr_data)
 		{
 
-			echo $id 	 = $usr_data['id'];
-			echo $heading = $usr_data['heading']; 
-			echo $editor1 = $usr_data['editor1'];
+			$id 	 = $usr_data['id'];
+			$heading = $usr_data['heading']; 
+			$editor1 = $usr_data['editor1'];
 
 			$d = $this->db->query("UPDATE services SET heading = '$heading',
 									discription = '$editor1' WHERE id = '$id' ");
 			return;
 
 		}
+
+
+		/********************************/
+		/*    contact info data insert  */
+		/********************************/ 
+		public function contact_info_data_insert($usr_data)
+		{
+
+
+        		$email 			  = $usr_data['email'];
+        		$address 		  = $usr_data['address'];
+        		$primary_phone    = $usr_data['primary_phone'];
+        		$secondary_phone1 = $usr_data['secondary_phone1'];
+        		$secondary_phone2 = $usr_data['secondary_phone2'];
+        		$secondary_phone3 = $usr_data['secondary_phone3'];
+        		$secondary_phone4 = $usr_data['secondary_phone4'];
+
+        		$this->db->query("INSERT INTO contact_info( email, address, primary_phone, secondary_phone1, secondary_phone2, secondary_phone3, secondary_phone4) VALUES( '$email' , '$address', '$primary_phone', '$secondary_phone1', '$secondary_phone2', '$secondary_phone3', '$secondary_phone4')");
+        		return;
+
+		}
 		
+		/********************************/
+		/*    Fetch All contact data    */
+		/********************************/
+		public function get_contact_info_data()
+		{
+
+			$get_data = $this->db->query("SELECT * FROM contact_info ORDER BY id DESC")->result();
+			//print_r($get_data); exit;
+			return $get_data;
+		}
+
+
+		/********************************/
+		/*    Fetch All contact data    */
+		/********************************/
+		public function get_contact_by_id($id)
+		{
+			$get_data = $this->db->query("SELECT * FROM contact_info where id = '$id' ")->result();
+			//print_r($get_data); exit;
+			return $get_data;
+		}
+
+		/********************************/
+		/*    service update by id      */
+		/********************************/
+		public function contact_info_update($usr_data)
+		{
+
+			$id 	 		  = $usr_data['id'];
+			$email            = $usr_data['email']; 
+			$address 		  = $usr_data['address'];
+			$primary_phone    = $usr_data['primary_phone'];
+			$secondary_phone1 = $usr_data['secondary_phone1'];
+			$secondary_phone2 = $usr_data['secondary_phone2'];
+			$secondary_phone3 = $usr_data['secondary_phone3'];
+			$secondary_phone4 = $usr_data['secondary_phone4'];
+
+			$d = $this->db->query("UPDATE contact_info SET email = '$id', email = '$email', address = '$address',
+			  					   primary_phone = '$primary_phone', secondary_phone1 = '$secondary_phone1',
+			  					   secondary_phone2 = '$secondary_phone2', secondary_phone3 = '$secondary_phone3',
+			  					   secondary_phone4 = '$secondary_phone4' WHERE id = '$id' ");
+			return;
+
+		}
+
+		public function delete_contact($id)
+		{
+			$get_data = $this->db->query("DELETE FROM contact_info WHERE id = '$id' ");
+			return;
+		}
 
 	}
 ?>	

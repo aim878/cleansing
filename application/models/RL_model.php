@@ -15,12 +15,12 @@
 		/********************************/
 		function usr_register($usr_data)
 		{
-			echo $usr_data['usrName'];
+			$usr_data['usrName'];
 			
-			$usrName = $this->db->escape($usr_data['usrName']);
+			$usrName     = $this->db->escape($usr_data['usrName']);
 			$usrPassword = $this->db->escape($usr_data['usrPassword']);
 
-			echo $this->db->query("INSERT INTO admin( usrName, password) VALUES
+			$this->db->query("INSERT INTO admin( usrName, password) VALUES
 				( $usrName, $usrPassword)");
 			return true;
 		}// ->
@@ -130,7 +130,6 @@
 			$id 	 = $usr_data['id'];
 			$heading = $usr_data['heading']; 
 			$editor1 = $usr_data['editor1'];
-			$img_id  = $usr_data['image_id'];
 
 			$this->db->query("UPDATE slider SET heading = '$heading', discription = '$editor1' WHERE id = '$id' ");
 			return;
@@ -145,7 +144,8 @@
 			$heading = $usr_data['heading']; 
 			$editor1 = $usr_data['editor1'];
 
-			echo $d= $this->db->query("UPDATE slider SET heading = '$heading', discription = '$editor1', image = '$orignalName' WHERE id = '$id' ");
+			$d= $this->db->query("UPDATE slider SET heading = '$heading',
+									discription = '$editor1', image = '$orignalName' WHERE id = '$id' ");
 			return;
 
 		} 
@@ -156,10 +156,11 @@
 		public function image_data_upload($usr_data, $orignalName)
 		{
 			$orignalName;
-			echo $heading = $usr_data['heading']; 
-			echo $editor1 = $usr_data['editor1']; 
+			$heading = $usr_data['heading']; 
+			$editor1 = $usr_data['editor1']; 
 
-			echo $this->db->query("INSERT INTO slider(heading, discription, image) VALUES('$heading', '$editor1', '$orignalName')");
+			$this->db->query("INSERT INTO slider(heading, discription, image) VALUES(
+									'$heading', '$editor1', '$orignalName')");
 		}
 
 		/********************************/
@@ -169,7 +170,7 @@
 		{
 
 			$get_data = $this->db->query("DELETE FROM slider WHERE id = '$id' ");
-			return $get_data;
+			return;
 	
 		}
 
@@ -182,6 +183,57 @@
 			//print_r($get_data); exit;
 			return $get_data;	
 		}
+
+		public function services_data_insert($usr_data)
+		{
+			$heading = $usr_data['heading']; 
+			$editor1 = $usr_data['editor1']; 
+
+			$this->db->query("INSERT INTO services(heading, discription) VALUES('$heading', '$editor1')");
+			return; 
+
+		}
+
+		public function get_services_data()
+		{
+
+			$get_data = $this->db->query("SELECT * FROM services")->result();
+			//print_r($get_data); exit;
+			return $get_data;
+		}
+
+
+		/********************************/
+		/* delete Image, and data also  */
+		/********************************/
+		public function delete_service($id)
+		{
+			$get_data = $this->db->query("DELETE FROM services WHERE id = '$id' ");
+			return;
+	
+		}
+
+		public function get_service_by_id($id)
+		{
+
+			$get_data = $this->db->query("SELECT * FROM services where id = '$id' ")->result();
+			//print_r($get_data); exit;
+			return $get_data;	
+		}
+
+		public function service_data_update($usr_data)
+		{
+
+			echo $id 	 = $usr_data['id'];
+			echo $heading = $usr_data['heading']; 
+			echo $editor1 = $usr_data['editor1'];
+
+			$d = $this->db->query("UPDATE services SET heading = '$heading',
+									discription = '$editor1' WHERE id = '$id' ");
+			return;
+
+		}
+		
 
 	}
 ?>	

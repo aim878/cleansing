@@ -265,7 +265,7 @@
 
                 		## Slider Images Update Query ##
                 		$this->RL_model->image_data_upload($usr_data, $orignalName);
-                        redirect('rl_view');
+                        redirect('slider_Images_show');
 
 
 
@@ -289,7 +289,9 @@
 		/********************************/
         public function delete_image($id)
         {
-        	
+        	$array_data = $this->RL_model->get_image_by_id($id);
+            $image = $array_data[0]->image;
+            unlink("uploads/".$image);
         	$this->RL_model->delete_image($id);
         	redirect('slider_Images_show');
         
@@ -341,8 +343,8 @@
                 else
                 {
 
-				## if user have  change images or other content ##
-        		##______________________________________________##
+				##  if user have  change images or other content  ##
+        		##________________________________________________##
 
                 		$orignalName =$_FILES['userfile']['name'];
                 		$file_data = $this->upload->data();
@@ -358,20 +360,104 @@
 		                    'editor1' => $this->input->post('editor1'),
                 		);
 
-                        $usr_data['id'];
+                        $id = $usr_data['id'];
                 		$usr_data['heading'];
                 		$usr_data['editor1'];
 
                 		## Slider Images Update Query ##
+                		$array_data = $this->RL_model->get_image_by_id($id);
+                		$previous_image = $array_data[0]->image;
+                		unlink("uploads/".$previous_image);
                 		$this->RL_model->image_data_update_with_image($usr_data, $orignalName);
-                        redirect('rl_view');
+                        redirect('slider_Images_show');
 
                 }
 
         }
+
+
+
+		/////////////////////////////////
+		///     Services  Segment     ///
+		/////////////////////////////////
+		/********************************/
+		/* 	  show service view         */
+		/********************************/
+        public function get_services_view()
+        {
+        	$this->load->view('backend/services_form');
+
+        }
 	
 
+		/********************************/
+		/* 	    Post	Services        */
+		/********************************/
+        public function post_services_data()
+        {
+        	$usr_data = array(
+		                    'heading' => $this->input->post('heading'),
+		                    'editor1' => $this->input->post('editor1')
+                		);
+
+
+        		$usr_data['heading'];
+        		$usr_data['editor1'];
+
+        		## Slider Images Update Query ##
+        		$this->RL_model->services_data_insert($usr_data);
+                redirect('rl_view');
+        }
 	
+
+		/********************************/
+		/* services data show in table  */
+		/********************************/
+        public function services_data_show()
+        {
+
+        	$array_data = $this->RL_model->get_services_data();
+        	$this->load->view('backend/services_editable', array('services_data' => $array_data));
+
+        }
+
+        /********************************/
+		/*  	 Services   Data        */
+		/********************************/
+        public function delete_services($id)
+        {
+        	$this->RL_model->delete_service($id);
+        	redirect('services_data_show');
+        
+        }
+
+        public function get_update_services($id)
+        {
+
+        	$get_signle_service = $this->RL_model->get_service_by_id($id);
+        	$this->load->view('backend/services_update', array('single_service_data' => $get_signle_service));
+        
+        }
+
+        public function post_update_services()
+        {
+
+            $usr_data = array(
+            	'id' 		=> $this->input->post('id'),
+                'heading' => $this->input->post('heading'),
+                'editor1' => $this->input->post('editor1'),
+    		);
+
+            $id 		 = $usr_data['id'];
+    		$heading  	 = $usr_data['heading'];
+    		$description = $usr_data['editor1'];
+
+    		$this->RL_model->service_data_update($usr_data);
+    		redirect('services_data_show');
+
+
+        }
+
 	}
 
 

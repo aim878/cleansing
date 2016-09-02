@@ -31,11 +31,12 @@
 				<li class="has-sub ">
 					<a href="javascript:;">
 					<i class="icon-bookmark-empty"></i> 
-					<span class="title">UI Features</span>
+					<span class="title">Cleansing Features</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub">
-						<li ><a href="<?php echo base_url(); ?>slider_Images_show">Slider Images</a></li>
+						<li ><a href="<?php echo base_url(); ?>slider_Images_show">Slider data</a></li>
+						<li ><a href="<?php echo base_url(); ?>services_data_show">Services</a></li>
 					</ul>
 				</li>
 				<li class="has-sub ">
@@ -45,8 +46,8 @@
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub">
-						<li ><a href="form_layout.html">Form Layouts</a></li>
-						<li ><a href="form_samples.html">Advance Form Samples</a></li>
+						<li ><a href="<?php echo base_url(); ?>usr_profile">slider form</a></li>
+						<li ><a href="<?php echo base_url(); ?>get_services_view"">services form</a></li>
 						<li ><a href="form_component.html">Form Components</a></li>
 						<li ><a href="form_wizard.html">Form Wizard</a></li>
 						<li ><a href="form_validation.html">Form Validation</a></li>

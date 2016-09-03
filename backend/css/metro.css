@@ -67,7 +67,7 @@ select:focus {
 
 .btn.green-stripe
 {
-	border-left: 3px solid #35aa47;
+	border-left: 3px solid #BF0203;
 }
 
 /*  Red */
@@ -114,7 +114,7 @@ select:focus {
 .btn.green {
   color: white;
   text-shadow: none;	 
-  background-color: #35aa47;
+  background-color: #BF0203;
 }
 .btn.green:hover, 
 .btn.green:focus, 
@@ -122,7 +122,7 @@ select:focus {
 .btn.green.active,
 .btn.green.disabled, 
 .btn.green[disabled]{ 
-  background-color: #1d943b !important;
+  background-color: #BF0200 !important;
   color: #fff !important;
 }
 

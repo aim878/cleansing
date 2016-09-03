@@ -46,7 +46,6 @@
   <!-- END LOGIN -->
   <!-- BEGIN COPYRIGHT -->
   <div class="copyright">
-    2013 &copy; Metronic. Admin Dashboard Template.
   </div>
   <!-- END COPYRIGHT -->
   <!-- BEGIN JAVASCRIPTS -->

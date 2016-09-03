@@ -22,37 +22,47 @@
 					<!-- END RESPONSIVE QUICK SEARCH FORM -->
 				</li>
 				<li class="start active ">
-					<a href="<?php echo base_url(); ?>rl_view">
+					<a href="<?php echo base_url(); ?>slider_Images_show">
 					<i class="icon-home"></i> 
 					<span class="title">Dashboard</span>
 					<span class="selected"></span>
 					</a>
 				</li>
-				<li class="has-sub ">
-					<a href="javascript:;">
+				<li class="start">
+					<a href="<?php echo base_url(); ?>slider_Images_show">
 					<i class="icon-bookmark-empty"></i> 
-					<span class="title">Cleansing Features</span>
-					<span class="arrow "></span>
+					<span class="title">Slider</span>
+					<span class="selected"></span>
 					</a>
-					<ul class="sub">
-						<li ><a href="<?php echo base_url(); ?>slider_Images_show">Slider data</a></li>
-						<li ><a href="<?php echo base_url(); ?>services_data_show">Services</a></li>
-						<li ><a href="<?php echo base_url(); ?>contact_info_data_show">Contact</a></li>
-
-					</ul>
 				</li>
+				<li class="start">
+					<a href="<?php echo base_url(); ?>services_data_show">
+					<i class="icon-bookmark-empty"></i> 
+					<span class="title">Services</span>
+					<span class="selected"></span>
+					</a>
+				</li>
+				<li class="start">
+					<a href="<?php echo base_url(); ?>contact_info_data_show">
+					<i class="icon-bookmark-empty"></i> 
+					<span class="title">Contact-info</span>
+					<span class="selected"></span>
+					</a>
+				</li>
+				
+				<!--
 				<li class="has-sub ">
 					<a href="javascript:;">
 					<i class="icon-table"></i> 
-					<span class="title">Form Stuff</span>
+					<span class="title">Forms</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub">
-						<li ><a href="<?php echo base_url(); ?>usr_profile">slider form</a></li>
-						<li ><a href="<?php echo base_url(); ?>get_services_view"">services form</a></li>
-						<li ><a href="<?php echo base_url(); ?>get_services_view"">contact_info form</a></li>
+						<li ><a href="<?php echo base_url(); ?>usr_profile">Slider</a></li>
+						<li ><a href="<?php echo base_url(); ?>get_services_view">Services</a></li>
+						<li ><a href="<?php echo base_url(); ?>get_contact_info_view">Contact_info</a></li>
 					</ul>
-				</li>
+				</li>-->
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>

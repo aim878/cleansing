@@ -17,31 +17,10 @@
 			<div class="container-fluid">
 				<!-- BEGIN PAGE HEADER-->
 				<div class="row-fluid">
-					<div class="span12">
-						<!-- BEGIN STYLE CUSTOMIZER -->
-						<div class="color-panel hidden-phone">
-							<div class="color-mode-icons icon-color"></div>
-							<div class="color-mode-icons icon-color-close"></div>
-							<div class="color-mode">
-								<p>THEME COLOR</p>
-								<ul class="inline">
-									<li class="color-black current color-default" data-style="default"></li>
-									<li class="color-blue" data-style="blue"></li>
-									<li class="color-brown" data-style="brown"></li>
-									<li class="color-purple" data-style="purple"></li>
-									<li class="color-white color-light" data-style="light"></li>
-								</ul>
-								<label class="hidden-phone">
-								<input type="checkbox" class="header" checked value="" />
-								<span class="color-mode-label">Fixed Header</span>
-								</label>							
-							</div>
-						</div>
-						<!-- END BEGIN STYLE CUSTOMIZER -->   	
+					<div class="span12">  	
 						<!-- BEGIN PAGE TITLE & BREADCRUMB-->			
 						<h3 class="page-title">
 							Contact Info 			
-							<small>statistics and more</small>
 						</h3>
 						<ul class="breadcrumb">
 							<li>
@@ -49,7 +28,7 @@
 								<a href="index.html">Home</a> 
 								<i class="icon-angle-right"></i>
 							</li>
-							<li><a href="#">Contact Info Form</a></li>
+							<li><a href="#">Contact Info</a></li>
 							<li class="pull-right no-text-shadow">
 								<div id="dashboard-report-range" class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive" data-tablet="" data-desktop="tooltips" data-placement="top" data-original-title="Change dashboard date range">
 									<i class="icon-calendar"></i>
@@ -118,43 +97,43 @@
 								    <div class="control-group">
 			                          <label class="control-label">Email</label>
 			                          <div class="controls">
-			                             <input type="email" placeholder="Enter Valid Email" name="email" class="span6 m-wrap popovers" data-trigger="hover" data-content="Popover body goes here. Popover body goes here." data-original-title="Popover header" required/>
+			                             <input type="email" placeholder="Enter Valid Email" name="email" class="span6 m-wrap popovers" required/>
 			                          </div>
 			                        </div>
 								    <div class="control-group">
 			                          <label class="control-label">Address</label>
 			                          <div class="controls">
-			                             <input type="text" placeholder="Enter your Address" name="address" class="span6 m-wrap popovers" data-trigger="hover" data-content="Popover body goes here. Popover body goes here." data-original-title="Popover header" required/>
+			                             <input type="text" placeholder="Enter your Address" name="address" class="span6 m-wrap popovers" required/>
 			                          </div>
 			                        </div>
 								    <div class="control-group">
-			                          <label class="control-label">Primary Phone</label>
+			                          <label class="control-label">Main Phone</label>
 			                          <div class="controls">
-			                             <input type="text" name="primary_phone" placeholder="Primary Phone" class="span6 m-wrap popovers" data-trigger="hover" data-content="Popover body goes here. Popover body goes here." data-original-title="Popover header" required/>
+			                             <input type="text" name="primary_phone" placeholder="Primary Phone" class="span6 m-wrap popovers" required/>
 			                          </div>
 			                        </div>
 								    <div class="control-group">
-			                          <label class="control-label">Secondary phone 1</label>
+			                          <label class="control-label">phone-1</label>
 			                          <div class="controls">
-			                             <input type="text" placeholder="Secondary phone 1" name="secondary_phone1" class="span6 m-wrap popovers" data-trigger="hover" data-content="Popover body goes here. Popover body goes here." data-original-title="Popover header" required/>
+			                             <input type="text" placeholder="phone 1" name="secondary_phone1" class="span6 m-wrap popovers"  required/>
 			                          </div>
 			                        </div>			                        			                        		
 								    <div class="control-group">
-			                          <label class="control-label">Secondary phone 2</label>
+			                          <label class="control-label">phone-2</label>
 			                          <div class="controls">
-			                             <input type="text" placeholder="Secondary phone 2" name="secondary_phone2" class="span6 m-wrap popovers" data-trigger="hover" data-content="Popover body goes here. Popover body goes here." data-original-title="Popover header" required/>
+			                             <input type="text" placeholder="phone 2" name="secondary_phone2" class="span6 m-wrap popovers" required/>
 			                          </div>
 			                        </div>
 								    <div class="control-group">
-			                          <label class="control-label">Secondary phone 3</label>
+			                          <label class="control-label">phone-3</label>
 			                          <div class="controls">
-			                             <input type="text" placeholder="Secondary phone 3" name="secondary_phone3" class="span6 m-wrap popovers" data-trigger="hover" data-content="Popover body goes here. Popover body goes here." data-original-title="Popover header" required/>
+			                             <input type="text" placeholder="phone 3" name="secondary_phone3" class="span6 m-wrap popovers"  required/>
 			                          </div>
 			                        </div>
 								    <div class="control-group">
-			                          <label class="control-label">Secondary phone 4</label>
+			                          <label class="control-label">phone-4</label>
 			                          <div class="controls">
-			                             <input type="text" placeholder="Secondary phone 4" name="secondary_phone4" class="span6 m-wrap popovers" data-trigger="hover" data-content="Popover body goes here. Popover body goes here." data-original-title="Popover header" required/>
+			                             <input type="text" placeholder="phone 4" name="secondary_phone4" class="span6 m-wrap popovers"  required/>
 			                          </div>
 			                        </div>
 			                      	<div class="form-actions">

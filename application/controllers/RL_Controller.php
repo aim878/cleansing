@@ -58,11 +58,11 @@
 		
 		}
  
-		public function rl_view()
+		public function admin()
 		{
 			if($this->RL_model->is_user_logged_in())
 			{
-				redirect("usr_profile");
+				redirect("slider_Images_show");
 			}
 			else
 			{
@@ -344,7 +344,8 @@
 						$usr_data['heading'];
                 		$usr_data['editor1']; 
 
-                		$this->RL_model->image_data_update_without_image($usr_data);                       
+                		$this->RL_model->image_data_update_without_image($usr_data);
+                		redirect('slider_Images_show');                       
                 
                 }
                 else

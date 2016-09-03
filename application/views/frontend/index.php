@@ -136,9 +136,9 @@
 				<!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
 					<div id="rev_slider_34_1" class="rev_slider fullwidthabanner" data-version="5.0.7">
 						<ul>	<!-- SLIDE  -->
-							<li data-index="rs-129" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url(); ?>frontend/images/corporate/corporate1-100x50.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Domestic Cleaning" data-description="Our pricing is transparent and straightforward">
+							<li data-index="rs-129" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo base_url(); ?>frontend/images/corporate/corporate1-100x50.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="<?php echo $slider_raw[0]->heading; ?>" data-description="<?php echo $slider_raw[0]->discription; ?>">
 								<!-- MAIN IMAGE -->
-								<img src="<?php echo base_url(); ?>frontend/images/corporate/domestic.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="uploads/<?php echo $slider_raw[0]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 1 -->
@@ -183,7 +183,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">Our pricing is transparent and straightforward.
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[0]->discription; ?>
 								</div>
 
 								<!-- LAYER NR. 3 -->
@@ -206,7 +206,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 7; white-space: nowrap;">Domestic Cleaning 
+									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[0]->heading; ?> 
 								</div>
 
 								<!-- LAYER NR. 4 -->
@@ -235,9 +235,9 @@
 								</div>
 							</li>
 							<!-- SLIDE  -->
-							<li data-index="rs-130" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/corporate/corporate2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Office Cleaning" data-description="First Impressions are imperative within a building">
+							<li data-index="rs-130" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/corporate/corporate2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="<?php echo $slider_raw[1]->heading; ?>" data-description="<?php echo $slider_raw[1]->discription; ?>">
 								<!-- MAIN IMAGE -->
-								<img src="<?php echo base_url(); ?>frontend/images/corporate/office.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="uploads/<?php echo $slider_raw[1]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 1 -->
@@ -282,7 +282,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">First Impressions are imperative within a building 
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[1]->discription; ?> 
 								</div>
 
 								<!-- LAYER NR. 3 -->
@@ -305,7 +305,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 7; white-space: nowrap;">Office Cleaning 
+									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[1]->heading; ?> 
 								</div>
 
 								<!-- LAYER NR. 4 -->
@@ -334,9 +334,9 @@
 								</div>
 							</li>
 							<!-- SLIDE  -->
-							<li data-index="rs-131" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/corporate/corporate3-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Carpet Cleaning" data-description="We offers a professional, affordable carpet cleaning service">
+							<li data-index="rs-131" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/corporate/corporate3-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="<?php echo $slider_raw[2]->heading; ?>" data-description="<?php echo $slider_raw[2]->discription; ?>">
 								<!-- MAIN IMAGE -->
-								<img src="<?php echo base_url(); ?>frontend/images/corporate/carpet.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="uploads/<?php echo $slider_raw[2]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 1 -->
@@ -381,7 +381,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">We offers a professional, affordable carpet cleaning service 
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[2]->discription; ?>
 								</div>
 
 								<!-- LAYER NR. 3 -->
@@ -404,7 +404,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 7; white-space: nowrap;">Carpet Cleaning
+									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[2]->heading; ?>
 								</div>
 
 								<!-- LAYER NR. 4 -->
@@ -433,9 +433,9 @@
 								</div>
 							</li>
 							<!-- SLIDE  -->
-							<li data-index="rs-132" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/corporate/corporate4-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="POWERFUL &amp; EFFECTIVE" data-description="Raise efficiency, cut downtime, and keep your projects on time.">
+							<li data-index="rs-132" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/corporate/corporate4-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="<?php echo $slider_raw[3]->heading; ?>" data-description="<?php echo $slider_raw[3]->discription; ?>">
 								<!-- MAIN IMAGE -->
-								<img src="<?php echo base_url(); ?>frontend/images/corporate/corporate4.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="uploads/<?php echo $slider_raw[3]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 1 -->
@@ -480,7 +480,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">Raise efficiency, cut downtime, and keep your projects on time. 
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[1]->discription; ?> 
 								</div>
 
 								<!-- LAYER NR. 3 -->
@@ -503,7 +503,7 @@
 									data-responsive_offset="on" 
 
 									
-									style="z-index: 7; white-space: nowrap;">POWERFUL &amp; EFFECTIVE 
+									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[3]->heading; ?> 
 								</div>
 
 								<!-- LAYER NR. 4 -->
@@ -722,10 +722,10 @@
                   <div class="col-xs-2 service_domestic"><a href="#"></a></div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">DOMESTIC</h4>
+                      <h4 class="black module-title"><?php echo $service_data[0]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>Providing your home with the utmost care and attention requires training and experience. We have a great miture of both. Our pricing is transparent and straightforward. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[0]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
@@ -733,10 +733,10 @@
                   <div class="col-xs-2 service_office"><a href="#"></a></div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">OFFICE</h4>
+                      <h4 class="black module-title"><?php echo $service_data[1]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>Anyclean focuses on achieving and maintaining the highest standards of cleanliness within your environment. This allows you as the customer to focus on your own. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[1]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
@@ -744,10 +744,10 @@
                   <div class="col-xs-2 service_removals"><a href="#"></a></div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">REMOVALS</h4>
+                      <h4 class="black module-title"><?php echo $service_data[2]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>Whether you need to relocate a single item or an entire house into or out of Slough, Reading, Bracknell, Buckinghamshire, Berkshire, ABC Removals has the solution for you. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[2]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
@@ -755,10 +755,10 @@
                   <div class="col-xs-2 service_carpet"><a href="#"></a></div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">CARPET</h4>
+                      <h4 class="black module-title"><?php echo $service_data[3]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>We offers a professional, affordable carpet cleaning service in Slough, Reading,Maidenhead, West london and makes your home a healthier, more enjoyable living space. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[3]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
@@ -766,10 +766,10 @@
                   <div class="col-xs-2 service_edt"><a href="#"></a></div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">END OF TENANCYs</h4>
+                      <h4 class="black module-title"><?php echo $service_data[4]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>We use end of tenancy cleaning specialists, who continually work closely with inventory clerks, landlords and estate agents to maintain their cleaning checklists. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[4]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>
@@ -777,10 +777,10 @@
                   <div class="col-xs-2 service_deep"><a href="#"></a> </div>
                   <div class="col-xs-10">
                     <div>
-                      <h4 class="black module-title">DEEP CLEANING</h4>
+                      <h4 class="black module-title"><?php echo $service_data[5]->heading; ?></h4>
                     </div>
                     <div>
-                      <p>We provide deep cleaning to residential and commercial properties across London. All our services are fully insured and guaranteed. <a href="#">Read More</a></p>
+                      <p><?php echo $service_data[5]->discription; ?><a href="#">Read More</a></p>
                     </div>
                   </div>
                 </div>

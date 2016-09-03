@@ -561,10 +561,21 @@
         
         }
 
+        /********************************/
+		/*  	    Data        */
+		/********************************/
         public function testing()
         {
         	$contact_raw_data = $this->RL_model->get_contact_info_data();
         	$this->load->view('frontend/our-services', array(
+				'contact_info' => $contact_raw_data
+			));
+        }
+
+        public function testing2()
+        {
+        	$contact_raw_data = $this->RL_model->get_contact_info_data();
+        	$this->load->view('frontend/contact', array(
 				'contact_info' => $contact_raw_data
 			));
         }

@@ -33,7 +33,7 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
 
-        <!--[if lte IE 7]><script src="<?php echo base_url(); ?>frontend/js/socialmediaicons-lte-ie7.js"></script><![endif]-->
+        <!--[if lte IE 7]><script src="js/socialmediaicons-lte-ie7.js"></script><![endif]-->
 
     <!-- LOAD JQUERY LIBRARY -->
 	<script type="text/javascript" src="<?php echo base_url(); ?>frontend/js/jquery-1.11.3.min.js"></script>
@@ -200,7 +200,7 @@
               <div class="row-fluid">
               
               
-             <iframe src="<?php echo base_url(); ?>frontend/https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.3181843995335!2d-0.6435956846593504!3d51.52572361718512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487664b9b1f5e08b%3A0x449be9a9d52d2788!2s848+Plymouth+Rd%2C+Slough+SL1+4LP%2C+UK!5e0!3m2!1sen!2s!4v1471358669731" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.3181843995335!2d-0.6435956846593504!3d51.52572361718512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487664b9b1f5e08b%3A0x449be9a9d52d2788!2s848+Plymouth+Rd%2C+Slough+SL1+4LP%2C+UK!5e0!3m2!1sen!2s!4v1471358669731" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                          
                  
               </div>		
@@ -209,7 +209,7 @@
         <!-- Google Map for Header End -->
         
  	</div>
-    	<?php include('footer2.php'); ?>
+    	<?php include('footer.php'); ?>
 
  	<!-- scroll-to-top start -->
     <span id="scroll-to-top">
@@ -229,7 +229,7 @@
     <script src="<?php echo base_url(); ?>frontend/js/for_megamenu_run_prettify.js"></script>
     
     <!-- for Retina Graphics -->
-    <script type="text/javascript" src="<?php echo base_url(); ?>frontend/js/retina.js"></script> 
+    <script type="<?php echo base_url(); ?>frontend/text/javascript" src="js/retina.js"></script> 
   </body>
 
 <!-- Mirrored from demo.artofthemes.com/html/proflex/page-contactus.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Dec 2015 05:16:09 GMT -->

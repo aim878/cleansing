@@ -49,11 +49,13 @@
 			$slider_raw_data  = $this->RL_model->get_slider_data();
 			$contact_raw_data = $this->RL_model->get_contact_info_data();
 			$service_raw_data = $this->RL_model->get_services_data();
+			$choose_us_data   = $this->RL_model->get_choose_us_data();
 			
 			$this->load->view('frontend/index', array(
 				'slider_raw' => $slider_raw_data,
 				'contact_info' => $contact_raw_data,
-				'service_data' => $service_raw_data
+				'service_data' => $service_raw_data,
+				'choose_us_data' => $choose_us_data
 			));
 		
 		}
@@ -62,7 +64,16 @@
 		{
 			if($this->RL_model->is_user_logged_in())
 			{
-				redirect("slider_Images_show");
+
+				$image_count = $this->RL_model->images_count();
+				$services_count = $this->RL_model->services_count();
+				$contacts_count = $this->RL_model->contacts_count();
+				$this->load->view('backend/dash_board', 
+					array(
+						'image_count' => $image_count,
+						'services_count' => $services_count,
+						'contacts_count' => $contacts_count 
+					));
 			}
 			else
 			{
@@ -141,33 +152,18 @@
                         'logged_in' => TRUE
                     );
                     $this->session->set_userdata($sess_data);
-                    redirect('usr_profile');
+                    redirect('admin');
                 }
                 else
                 {
                 	echo "okey";
                 	$this->form_validation->set_message('incorrect userName or Password');
-                    $this->rl_view();
+                    $this->admin();
                 }
             }
 		
 		}
 
-		/********************************/
-		/*      Show User Profile       */
-		/********************************/
-		public function usr_profile()
-		{
-			if($this->RL_model->is_user_logged_in())
-			{
-				$this->load->view('backend/dashboard', array('error' => ' '));
-			}
-			else
-			{
-				$this->load->view('backend/login');
-			
-			}
-		}
 
 		/********************************/
 		/*    Logout And Unset Data     */
@@ -181,7 +177,7 @@
 			);
 			$this->session->unset_userdata($array_items);
 			$this->session->sess_destroy();
-			redirect('rl_view');
+			redirect('admin');
 		}
 
 		/********************************/
@@ -234,8 +230,8 @@
                 $config['upload_path'] 			= './uploads/';
                 $config['allowed_types']        = 'gif|jpg|png';
                 $config['max_size']             = 5120; ## Exact 5 Mb
-                $config['max_width']            = 1800;
-                $config['max_height']           = 1200;
+                $config['max_width']            = 3000;
+                $config['max_height']           = 3000;
 
                 $this->upload->initialize($config);
 
@@ -253,8 +249,8 @@
 
                 		$orignalName =$_FILES['userfile']['name'];
                 		$file_data = $this->upload->data();
-          				$data['img'] = base_url().'/uploads/'.$file_data['file_name'];
-						echo $mk_dir = 'uploads/'.$file_data['file_name'];
+          				$data['img'] = FCPATH.'/uploads/'.$file_data['file_name'];
+						//$mk_dir = FCPATH.'/uploads/'.$file_data['file_name'];
 						$rawName = $file_data['raw_name'];
 						$ext = $file_data['file_ext'];
                         //$data = array('upload_data' => $this->upload->data());
@@ -272,7 +268,7 @@
 
                 		## Slider Images Update Query ##
                 		$this->RL_model->image_data_upload($usr_data, $orignalName);
-                        redirect('slider_Images_show');
+                        	redirect('slider_Images_show');
 
 
 
@@ -291,14 +287,15 @@
        
         }
 
+
         /********************************/
 		/*  	 Delete   Images        */
 		/********************************/
         public function delete_image($id)
         {
         	$array_data = $this->RL_model->get_image_by_id($id);
-            $image = $array_data[0]->image;
-            unlink("uploads/".$image);
+            	$image = $array_data[0]->image;
+            	unlink(FCPATH.'/uploads/'.$image);
         	$this->RL_model->delete_image($id);
         	redirect('slider_Images_show');
         
@@ -485,6 +482,11 @@
         	$this->load->view('backend/contact_info_form');
         }
 
+        public function get_slider_view()
+        {
+        	$this->load->view('backend/dashboard');
+        }
+
 
 		/********************************/
 		/* 	    post service data       */
@@ -563,9 +565,9 @@
         }
 
         /********************************/
-		/*  	    Data        */
+		/*  	   Service  Data        */
 		/********************************/
-        public function testing()
+        public function services()
         {
         	$contact_raw_data = $this->RL_model->get_contact_info_data();
         	$this->load->view('frontend/our-services', array(
@@ -573,7 +575,10 @@
 			));
         }
 
-        public function testing2()
+        /********************************/
+		/*  	   Contact  Data        */
+		/********************************/
+        public function contact()
         {
         	$contact_raw_data = $this->RL_model->get_contact_info_data();
         	$this->load->view('frontend/contact', array(
@@ -581,6 +586,91 @@
 			));
         }
 
-	}
+		/////////////////////////////////
+		///     Choose Us Segment     ///
+		/////////////////////////////////
+		/********************************/
+		/* 	    choose us view          */
+		/********************************/
+
+        public function get_choose_us_view()
+        {
+        	$this->load->view('backend/choose-us_form');
+        }
+
+        /********************************/
+		/* 	   post choose-us data      */
+		/********************************/
+        public function post_choose_us_data()
+        {
+        	$usr_data = array(
+		                    'heading' => $this->input->post('heading'),
+		                    'editor1' => $this->input->post('editor1')
+                		);
+
+
+        		$usr_data['heading'];
+        		$usr_data['editor1'];
+
+        		## Slider Images Update Query ##
+        		$this->RL_model->choose_us_data_insert($usr_data);
+        }
+
+
+
+		/********************************/
+		/* choose_us data show in table */
+		/********************************/
+        public function choose_us_data_show()
+        {
+
+        	$array_data = $this->RL_model->get_choose_us_data();
+        	$this->load->view('backend/choose_us_editable', array('choose_us_data' => $array_data));
+
+        }
+
+        /**********8************************/
+		/*  update choose_us_data in table */
+		/***********************************/
+        public function get_update_choose_us($id)
+        {
+
+        	$get_signle_choose_us = $this->RL_model->get_choose_us_by_id($id);
+        	$this->load->view('backend/choose_us_update', array('get_signle_choose_us' => $get_signle_choose_us));
+        }
+
+        /********************************/
+		/*     Post update choose us    */
+		/********************************/
+        public function post_update_choose_us()
+        {
+
+            $usr_data = array(
+            	'id' 		=> $this->input->post('id'),
+                'heading' => $this->input->post('heading'),
+                'editor1' => $this->input->post('editor1'),
+    		);
+
+            $id 		 = $usr_data['id'];
+    		$heading  	 = $usr_data['heading'];
+    		$description = $usr_data['editor1'];
+
+    		$this->RL_model->choose_us_update($usr_data);
+    		redirect('choose_us_data_show');
+
+
+        }
+
+        /********************************/
+		/*  	 Delete Chose Us        */
+		/********************************/
+        public function delete_choose_us($id)
+        {
+        	$this->RL_model->delete_choose_us_by_id($id);
+        	redirect('choose_us_data_show');
+        
+        }
+	
+}
 
 

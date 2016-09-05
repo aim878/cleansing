@@ -309,11 +309,101 @@
 
 		}
 
+		/********************************/
+		/*    Delete Contact by id      */
+		/********************************/
 		public function delete_contact($id)
 		{
 			$get_data = $this->db->query("DELETE FROM contact_info WHERE id = '$id' ");
 			return;
 		}
 
+		/********************************/
+		/*      Image Count in db       */
+		/********************************/
+		public function images_count()
+		{
+
+			$images_count = $this->db->query("SELECT * FROM slider")->num_rows();
+			return $images_count;
+		
+		}
+
+		/********************************/
+		/*      Service Count in db     */
+		/********************************/
+		public function services_count()
+		{
+			$services_count = $this->db->query("SELECT * FROM services")->num_rows();
+			return $services_count;
+		}
+
+		/********************************/
+		/*    Contact Count in db       */
+		/********************************/
+		public function contacts_count()
+		{
+			$contacts_count = $this->db->query("SELECT * FROM contact_info")->num_rows();
+			return $contacts_count;
+		}
+
+
+		public function choose_us_data_insert($usr_data)
+		{
+			$heading = $usr_data['heading']; 
+			$editor1 = $usr_data['editor1']; 
+
+			$this->db->query("INSERT INTO choose_us(choose_us_titile, choose_us_discription) VALUES('$heading', '$editor1')");
+			return; 
+
+		}
+
+		/********************************/
+		/*  Fetch All choose_us data    */
+		/********************************/
+		public function get_choose_us_data()
+		{
+
+			$get_data = $this->db->query("SELECT * FROM choose_us ORDER BY choose_us_id DESC")->result();
+			//print_r($get_data); exit;
+			return $get_data;
+		}
+
+		/********************************/
+		/*    Fetch All choose by id    */
+		/********************************/
+		public function get_choose_us_by_id($id)
+		{
+			$get_data = $this->db->query("SELECT * FROM choose_us where choose_us_id = '$id' ")->result();
+			//print_r($get_data); exit;
+			return $get_data;
+		}
+
+
+		/********************************/
+		/*   choose_us update by id     */
+		/********************************/
+		public function choose_us_update($usr_data)
+		{
+
+			$id 	 = $usr_data['id'];
+			$heading = $usr_data['heading']; 
+			$editor1 = $usr_data['editor1'];
+
+			$d = $this->db->query("UPDATE choose_us SET choose_us_titile = '$heading',
+									choose_us_discription = '$editor1' WHERE choose_us_id = '$id' ");
+			return;
+
+		}
+
+		/********************************/
+		/*    Delete Choose  by id      */
+		/********************************/
+		public function delete_choose_us_by_id($id)
+		{
+			$get_data = $this->db->query("DELETE FROM choose_us WHERE choose_us_id = '$id' ");
+			return;
+		}
+
 	}
-?>	
+	

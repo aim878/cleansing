@@ -10,6 +10,26 @@
 
 			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
 
+			<div id="portlet-config" class="modal hide">
+
+				<div class="modal-header">
+
+					<button data-dismiss="modal" class="close" type="button"></button>
+
+					<h3>portlet Settings</h3>
+
+				</div>
+
+				<div class="modal-body">
+
+					<p>Here will be a configuration form</p>
+
+					
+
+				</div>
+
+			</div>
+
 			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
 
 			<!-- BEGIN PAGE CONTAINER-->			
@@ -20,13 +40,13 @@
 
 				<div class="row-fluid">
 
-					<div class="span12"> 
+					<div class="span12">
 
 						<!-- BEGIN PAGE TITLE & BREADCRUMB-->			
 
 						<h3 class="page-title">
 
-							Main Sliders				
+							Choose-us 		
 
 						</h3>
 
@@ -44,13 +64,9 @@
 
 							<li>
 
-								<a href="#">Slider</a>
-
-								<i class="icon-angle-right"></i>
+								<a href="#">Choose-us</a>
 
 							</li>
-
-							
 
 						</ul>
 
@@ -74,7 +90,7 @@
 
 							<div class="portlet-title">
 
-								<h4><i class="icon-edit"></i>Sliders Data</h4>
+								<h4><i class="icon-edit"></i>Editable Table</h4>
 
 							</div>
 
@@ -88,14 +104,13 @@
 
 										<tr>
 
-											<th width="15%">Heading</th>
+											<th width="30%">Heading</th>
 
-											<th width="30%">Description</th>
+											<th width="50%">Description</th>
 
-											<th width="40%">Image</th>
+											<th width="20%">Action</th>
 
-											<th width="15%">Action</th>
-
+											
 
 										</tr>
 
@@ -103,17 +118,15 @@
 
 									<tbody>
 
-									<?php foreach($slider_data as $data) { ?>
+									<?php foreach($choose_us_data as $data) { ?>
 
 										<tr class="">
 
-											<td><?php echo $data->heading ?></td>
+											<td><?php echo $data->choose_us_titile ?></td>
 
-											<td><?php echo $data->discription ?></td>
+											<td><?php echo $data->choose_us_discription ?></td>
 
-											<td><img src="uploads/<?php echo $data->image ?>"/ height="150px" width="200px;"></td>
-
-											<td><a class="edit" href="<?php echo base_url();?>get_update_image/<?php echo $data->id ?>">Edit</a>&nbsp;<a class="delete" href="<?php echo base_url();?>delete_image/<?php echo $data->id ?>">Delete</a></td>
+											<td><a class="edit" href="<?php echo base_url();?>get_update_choose_us/<?php echo $data->choose_us_id ?>">Edit</a>&nbsp;<a class="delete" href="<?php echo base_url();?>delete_choose_us/<?php echo $data->choose_us_id ?>">Delete</a></td>
 
 										</tr>
 
@@ -123,7 +136,7 @@
 
 								</table>
 
-								<a href="<?php echo base_url(); ?>get_slider_view"><input type="button" class="btn blue" value="Add"></a>
+								<a href="<?php echo base_url(); ?>get_choose_us_view"><input type="button" class="btn blue" value="Add"></a>
 
 							</div>
 

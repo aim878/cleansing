@@ -42,7 +42,9 @@
 
 						<h3 class="page-title">
 
-							Main Sliders
+							Choose-us			
+
+							<small>statistics and more</small>
 
 						</h3>
 
@@ -58,7 +60,7 @@
 
 							</li>
 
-							<li><a href="#">Slider</a></li>
+							<li><a href="#">Choose-us</a></li>
 
 							<li class="pull-right no-text-shadow">
 
@@ -158,7 +160,7 @@
 
 		                     <div class="portlet-title">
 
-		                        <h4><i class="icon-reorder"></i>Image Upload..</h4>
+		                        <h4><i class="icon-reorder"></i>Choose-us Insert</h4>
 
 		                        <div class="tools">
 
@@ -176,9 +178,9 @@
 
 							<div class="portlet-body form">	
 
-								<form class="form-horizontal" action="<?php echo base_url(); ?>image_upload" method="post" enctype="multipart/form-data">
+								<form class="form-horizontal" action="<?php echo base_url(); ?>post_choose_us_data" method="post" enctype="multipart/form-data">
 
-								<div class="alert alert-error">
+								<div class="alert alert-error hide">
 
 									<button class="close" data-dismiss="alert"></button>
 
@@ -203,18 +205,6 @@
 			                        </div>
 
 			                        <div class="fileupload fileupload-new" data-provides="fileupload">
-
-		                            <div class="control-group">
-
-		                              <label class="control-label">Default</label>
-
-		                              <div class="controls">
-
-		                                 <input type="file" name="userfile" class="default" />
-
-		                              </div>
-
-		                            </div>
 
 			                        <div class="control-group">
 

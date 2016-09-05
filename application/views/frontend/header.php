@@ -20,7 +20,7 @@ contact@example.com</a>
               <div class="container">
               
               	  <div class="col-lg-3 col-md-3 col-sm-12">
-                      <a href="index.php"><img class="top20 bottom20 img-responsive" src="<?php echo base_url(); ?>frontend/images/logo.png" alt="Logo"></a>
+                      <a href="index.php" style="color:e02222;">Zamzam</a>
                   </div>
                   
                   <!-- Ads Banner Start -->
@@ -91,8 +91,8 @@ contact@example.com</a>
                                     <ul class="nav navbar-nav">
                             
                               <!-- MegaMenu Start -->
-                                <li class="dropdown active megamenu-fw"><a href="index.php" class="dropdown-toggle">Home</a></li>
-                                <li class="dropdown"> <a href="our-services.php">Services</a></li>
+                                <li class="dropdown active megamenu-fw"><a href="<?php echo base_url(); ?>">Home</a></li>
+                                <li class="dropdown"> <a href="<?php echo base_url(); ?>services">Services</a></li>
                                 <li class="dropdown"> <a href="#">Domestic Clean </a>
                                 </li>
                                 <li class="dropdown"> <a href="#">Office Clean</a>
@@ -105,7 +105,7 @@ contact@example.com</a>
                                 </li>
                                 <li class="dropdown"> <a href="#">Shop</a>
                                 </li>
-                                <li class="dropdown"> <a href="contact.php">Contact Us</a>
+                                <li class="dropdown"> <a href="<?php echo base_url(); ?>contact">Contact Us</a>
                                 </li>
                             </ul>
                                   </div>

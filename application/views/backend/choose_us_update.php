@@ -42,7 +42,7 @@
 
 						<h3 class="page-title">
 
-							Main Sliders
+							Choose-us			
 
 						</h3>
 
@@ -58,7 +58,7 @@
 
 							</li>
 
-							<li><a href="#">Slider</a></li>
+							<li><a href="#">Choose-us</a></li>
 
 							<li class="pull-right no-text-shadow">
 
@@ -158,7 +158,7 @@
 
 		                     <div class="portlet-title">
 
-		                        <h4><i class="icon-reorder"></i>Image Upload..</h4>
+		                        <h4><i class="icon-reorder"></i>Choose-us Update</h4>
 
 		                        <div class="tools">
 
@@ -176,9 +176,9 @@
 
 							<div class="portlet-body form">	
 
-								<form class="form-horizontal" action="<?php echo base_url(); ?>image_upload" method="post" enctype="multipart/form-data">
+								<form class="form-horizontal" action="<?php echo base_url(); ?>post_update_choose_us/" method="post" enctype="multipart/form-data">
 
-								<div class="alert alert-error">
+								<div class="alert alert-error hide">
 
 									<button class="close" data-dismiss="alert"></button>
 
@@ -196,7 +196,7 @@
 
 			                          <div class="controls">
 
-			                             <input type="text" name="heading" class="span6 m-wrap popovers" required/>
+			                             <input type="text" name="heading" value="<?php echo $get_signle_choose_us[0]->choose_us_titile; ?>" class="span6 m-wrap popovers" data-trigger="hover" data-content="Popover body goes here. Popover body goes here." data-original-title="Popover header" required/>
 
 			                          </div>
 
@@ -204,29 +204,23 @@
 
 			                        <div class="fileupload fileupload-new" data-provides="fileupload">
 
-		                            <div class="control-group">
-
-		                              <label class="control-label">Default</label>
-
-		                              <div class="controls">
-
-		                                 <input type="file" name="userfile" class="default" />
-
-		                              </div>
-
-		                            </div>
-
 			                        <div class="control-group">
 
                               			<label class="control-label">CKEditor</label>
 
                               			<div class="controls">
 
-                                 			<textarea class="span12 ckeditor m-wrap" name="editor1" rows="6"></textarea>
+                                 			<textarea class="span12 ckeditor m-wrap"  name="editor1" rows="6">
+
+                                 				<?php echo $get_signle_choose_us[0]->choose_us_discription; ?>
+
+                                 			</textarea>
 
                               			</div>
 
                            		    </div>
+
+                           		    <input type="hidden" name="id" value="<?php echo $get_signle_choose_us[0]->choose_us_id; ?>"> <!-- hidden field for-->
 
 									<div class="form-actions">
 

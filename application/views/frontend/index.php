@@ -37,7 +37,7 @@
 
     <!-- LOAD JQUERY LIBRARY -->
 	<script type="text/javascript" src="<?php echo base_url(); ?>frontend/js/jquery-1.11.3.min.js"></script>
-    <script src="<?php echo base_url(); ?>frontend/http://maps.google.com/maps/api/js?sensor=false" 
+    <script src="http://maps.google.com/maps/api/js?sensor=false" 
           type="text/javascript"></script>
     <!-- MEGAFOLIO PRO GALLERY CSS JS FILES  -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>frontend/megafolio/css/settings.css" media="screen" />
@@ -433,104 +433,7 @@
 								</div>
 							</li>
 							<!-- SLIDE  -->
-							<li data-index="rs-132" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/corporate/corporate4-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="<?php echo $slider_raw[3]->heading; ?>" data-description="<?php echo $slider_raw[3]->discription; ?>">
-								<!-- MAIN IMAGE -->
-								<img src="uploads/<?php echo $slider_raw[3]->image; ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-								<!-- LAYERS -->
-
-								<!-- LAYER NR. 1 -->
-								<div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme rs-parallaxlevel-0" 
-									 id="slide-132-layer-3" 
-									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-									 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-												data-width="full"
-									data-height="full"
-									data-whitespace="normal"
-									data-transform_idle="o:1;"
-						 
-									 data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;" 
-									 data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" 
-									data-start="1000" 
-									data-basealign="slide" 
-									data-responsive_offset="on" 
-
-									
-									style="z-index: 5;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 1.00);"> 
-								</div>
-
-								<!-- LAYER NR. 2 -->
-								<div class="tp-caption Newspaper-Title   tp-resizeme rs-parallaxlevel-0" 
-									 id="slide-132-layer-1" 
-									 data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" 
-									 data-y="['top','top','top','top']" data-voffset="['165','135','105','130']" 
-												data-fontsize="['50','50','50','30']"
-									data-lineheight="['55','55','55','35']"
-									data-width="['600','600','600','420']"
-									data-height="none"
-									data-whitespace="normal"
-									data-transform_idle="o:1;"
-						 
-									 data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" 
-									 data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" 
-									 data-mask_in="x:0px;y:0px;" 
-									 data-mask_out="x:0;y:0;" 
-									data-start="1000" 
-									data-splitin="none" 
-									data-splitout="none" 
-									data-responsive_offset="on" 
-
-									
-									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><?php echo $slider_raw[1]->discription; ?> 
-								</div>
-
-								<!-- LAYER NR. 3 -->
-								<div class="tp-caption Newspaper-Subtitle   tp-resizeme rs-parallaxlevel-0" 
-									 id="slide-132-layer-2" 
-									 data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" 
-									 data-y="['top','top','top','top']" data-voffset="['140','110','80','100']" 
-												data-width="none"
-									data-height="none"
-									data-whitespace="nowrap"
-									data-transform_idle="o:1;"
-						 
-									 data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" 
-									 data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" 
-									 data-mask_in="x:0px;y:0px;" 
-									 data-mask_out="x:0;y:0;" 
-									data-start="1000" 
-									data-splitin="none" 
-									data-splitout="none" 
-									data-responsive_offset="on" 
-
-									
-									style="z-index: 7; white-space: nowrap;"><?php echo $slider_raw[3]->heading; ?> 
-								</div>
-
-								<!-- LAYER NR. 4 -->
-								<div class="tp-caption Newspaper-Button rev-btn  rs-parallaxlevel-0" 
-									 id="slide-132-layer-5" 
-									 data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']" 
-									 data-y="['top','top','top','top']" data-voffset="['361','331','301','245']" 
-												data-width="none"
-									data-height="none"
-									data-whitespace="nowrap"
-									data-transform_idle="o:1;"
-										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-										data-style_hover="c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"
-						 
-									 data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" 
-									 data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" 
-									 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-									 data-mask_out="x:0;y:0;s:inherit;e:inherit;" 
-									data-start="1000" 
-									data-splitin="none" 
-									data-splitout="none" 
-									data-responsive_offset="on" 
-									data-responsive="off"
-									
-									style="z-index: 8; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">READ MORE 
-								</div>
-							</li>
+							
 						</ul>
 						<div class="tp-bannertimer tp-bottom" style="height: 5px; background-color: rgba(166, 216, 236, 1.00);"></div>	
 					</div>
@@ -808,8 +711,8 @@
                         		<h3><img src="<?php echo base_url(); ?>frontend/images/icons/icon1.png"  style="margin-top:5%;" /></h3>
                         		</div>
                                 <div class="col-md-10 col-xs-10">
-                                <h3 class="title">Five Star Quality</h3>
-                        		<p>Every time you book a service with us, we’ll send you qualified and experienced cleaning professionals. </p>
+                                <h3 class="title"><?php echo $choose_us_data[0]->choose_us_titile; ?></h3>
+                        		<p><?php echo $choose_us_data[0]->choose_us_discription; ?></p>
                         		</div>
                             </div>
                         </div>
@@ -820,8 +723,8 @@
                         		<h3><img src="<?php echo base_url(); ?>frontend/images/icons/icon2.png"  style="margin-top:5%;" /></h3>
                         		</div>
                                 <div class="col-md-10 col-xs-10">
-                                <h3 class="title">Reasonable Pricing</h3>
-                        		<p>We offer excellent packages and affordable rates that meet our customers’ needs.</p>
+                                <h3 class="title"><?php echo $choose_us_data[1]->choose_us_titile; ?></h3>
+                        		<p><?php echo $choose_us_data[1]->choose_us_discription; ?></p>
                         		</div>
                             </div>
                         </div>
@@ -831,8 +734,8 @@
                         		<h3><img src="<?php echo base_url(); ?>frontend/images/icons/icon1.png"  style="margin-top:5%;" /></h3>
                         		</div>
                                 <div class="col-md-10 col-xs-10">
-                                  <h3 class="title">Five Star Quality</h3>
-                        		<p>Every time you book a service with us, we’ll send you qualified and experienced cleaning professionals.</p>
+                                  <h3 class="title"><?php echo $choose_us_data[2]->choose_us_titile; ?></h3>
+                        		<p><?php echo $choose_us_data[2]->choose_us_discription; ?></p>
                         		</div>
                             </div>
                         </div>
@@ -847,8 +750,8 @@
                         		<h3><img src="<?php echo base_url(); ?>frontend/images/icons/icon3.png"  style="margin-top:5%;" /></h3>
                         		</div>
                                 <div class="col-md-10 col-xs-10">
-                                <h3 class="title">Customer Support</h3>
-                        		<p>Got a question? Don't keep it to yourself. Start a chat or call us to get a quick and simple answer.</p>
+                                <h3 class="title"><?php echo $choose_us_data[3]->choose_us_titile; ?></h3>
+                        		<p><?php echo $choose_us_data[3]->choose_us_discription; ?></p>
                         		</div>
                             </div>
                         </div>
@@ -858,8 +761,8 @@
                         		<h3><img src="<?php echo base_url(); ?>frontend/images/icons/icon4.png"  style="margin-top:5%;" /></h3>
                         		</div>
                                 <div class="col-md-10 col-xs-10">
-                                <h3 class="title">Fantastic Guarantee</h3>
-                        		<p>We guarantee your satisfaction. If we get something wrong, we’ll come back and re-do it for free. </p>
+                                <h3 class="title"><?php echo $choose_us_data[4]->choose_us_titile; ?></h3>
+                        		<p><?php echo $choose_us_data[4]->choose_us_discription; ?></p>
                         		</div>
                             </div>
                         </div>
@@ -869,8 +772,8 @@
                         		<h3><img src="<?php echo base_url(); ?>frontend/images/icons/icon3.png"  style="margin-top:5%;" /></h3>
                         		</div>
                                 <div class="col-md-10 col-xs-10">
-                                <h3 class="title">Customer Support</h3>
-                        		<p>Got a question? Don't keep it to yourself. Start a chat or call us to get a quick and simple answer.</p>
+                                <h3 class="title"><?php echo $choose_us_data[5]->choose_us_titile; ?></h3>
+                        		<p><?php echo $choose_us_data[5]->choose_us_discription; ?></p>
                         		</div>
                             </div>
                         </div>

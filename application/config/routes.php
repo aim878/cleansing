@@ -50,8 +50,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'RL_Controller';
+
+// $route['site'] = 'MainController';
+// $route['site/(:any)'] = 'MainController/$1';
+// $route['site/(:any)/(:any)'] = 'MainController/$1/$2';
+
 $route['(:any)'] = 'RL_Controller/$1';
 $route['(:any)/(:any)'] = 'RL_Controller/$1/$2';
 $route['(:any)/(:any)/(:any)'] = 'RL_Controller/$1/$2/$3';
+
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+

@@ -46,7 +46,7 @@
 
 				<li class="start active ">
 
-					<a href="<?php echo base_url(); ?>admin">
+					<a href="#">
 
 					<i class="icon-home"></i> 
 
@@ -60,67 +60,11 @@
 
 				<li class="start">
 
-					<a href="<?php echo base_url(); ?>slider_Images_show">
+					<a href="#">
 
 					<i class="icon-bookmark-empty"></i> 
 
 					<span class="title">Slider</span>
-
-					<span class="selected"></span>
-
-					</a>
-
-				</li>
-
-				<li class="start">
-
-					<a href="<?php echo base_url(); ?>services_data_show">
-
-					<i class="icon-bookmark-empty"></i> 
-
-					<span class="title">Services</span>
-
-					<span class="selected"></span>
-
-					</a>
-
-				</li>
-
-				<li class="start">
-
-					<a href="<?php echo base_url(); ?>contact_info_data_show">
-
-					<i class="icon-bookmark-empty"></i> 
-
-					<span class="title">Contact-info</span>
-
-					<span class="selected"></span>
-
-					</a>
-
-				</li>
-
-				<li class="start">
-
-					<a href="<?php echo base_url(); ?>choose_us_data_show">
-
-					<i class="icon-bookmark-empty"></i> 
-
-					<span class="title">Choose-Us</span>
-
-					<span class="selected"></span>
-
-					</a>
-
-				</li>
-
-				<li class="start">
-
-					<a href="<?php echo base_url(); ?>logout">
-
-					<i class="icon-bookmark-empty"></i> 
-
-					<span class="title">Logout</span>
 
 					<span class="selected"></span>
 

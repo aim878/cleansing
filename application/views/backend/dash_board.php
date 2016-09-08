@@ -46,13 +46,13 @@
 								</div>
 								<div class="details">
 									<div class="number">
-										<?php echo $image_count ?>
+										90
 									</div>
 									<div class="desc">									
-										Slider Data
+										User Registered
 									</div>
 								</div>
-								<a class="more" href="<?php echo base_url(); ?>slider_Images_show">
+								<a class="more" href="">
 								View more <i class="m-icon-swapright m-icon-white"></i>
 								</a>						
 							</div>
@@ -63,10 +63,10 @@
 									<i class="icon-bar-chart"></i>
 								</div>
 								<div class="details">
-									<div class="number"><?php echo $services_count ?></div>
-									<div class="desc">Services</div>
+									<div class="number">80</div>
+									<div class="desc">Software Order's</div>
 								</div>
-								<a class="more" href="<?php echo base_url(); ?>services_data_show">
+								<a class="more" href="">
 								View more <i class="m-icon-swapright m-icon-white"></i>
 								</a>						
 							</div>
@@ -77,10 +77,10 @@
 									<i class="icon-bar-chart"></i>
 								</div>
 								<div class="details">
-									<div class="number"><?php echo $contacts_count ?></div>
-									<div class="desc">Contacts</div>
+									<div class="number">111</div>
+									<div class="desc">Compact-Disk Order's</div>
 								</div>
-								<a class="more" href="<?php echo base_url(); ?>contact_info_data_show">
+								<a class="more" href="">
 								View more <i class="m-icon-swapright m-icon-white"></i>
 								</a>						
 							</div>
@@ -91,8 +91,8 @@
 									<i class="icon-bar-chart"></i>
 								</div>
 								<div class="details">
-									<div class="number">0</div>
-									<div class="desc">Adds</div>
+									<div class="number">$121232323</div>
+									<div class="desc">Total Sales</div>
 								</div>
 								<a class="more" href="#">
 								View more <i class="m-icon-swapright m-icon-white"></i>
